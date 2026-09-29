@@ -12,7 +12,26 @@ jobs:
       - name: Check Bash syntax
         run: |
           bash -n install.sh
+          bash -n uninstall.sh
           bash -n desktops/kiran/files/kiran-x410
           bash -n desktops/kiran/files/kiran-x410-session
+      - name: Check pinned file digests
+        run: |
+          set -euo pipefail
+          for file_name in \
+            kiran-x410 \
+            kiran-x410-session \
+            kiran-x410.service \
+            Start-Kiran-X410.ps1 \
+            Install-Windows-Shortcut.ps1; do
+            expected="$(grep -F "[$file_name]=" install.sh | cut -d'"' -f2)"
+            actual="$(sha256sum "desktops/kiran/files/$file_name" | cut -d' ' -f1)"
+            test -n "$expected"
+            test "$actual" = "$expected"
+          done
+          expected="$(grep -F 'helper_sha256=' uninstall.sh | cut -d'"' -f2)"
+          actual="$(sha256sum desktops/kiran/files/Uninstall-Windows-Shortcut.ps1 | cut -d' ' -f1)"
+          test -n "$expected"
+          test "$actual" = "$expected"
       - name: Check whitespace
         run: git diff --check

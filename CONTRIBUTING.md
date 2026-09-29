@@ -37,8 +37,11 @@ Before proposing a change, run:
 
 ```bash
 bash -n install.sh
+bash -n uninstall.sh
 bash -n desktops/<desktop>/files/*
 git diff --check
 ```
 
 PowerShell scripts must also be parsed or executed on Windows before publication.
+
+If a downloaded file under `desktops/kiran/files/` changes, update its embedded SHA-256 digest in `install.sh` or `uninstall.sh` in the same change.

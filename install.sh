@@ -9,6 +9,7 @@ base_url="${OPENEULER_DESKTOP_BASE:-https://raw.githubusercontent.com/vinberg88/
 usage() {
     cat <<'EOF'
 Usage: bash install.sh [desktop] [--check]
+       bash install.sh list
 
 Available desktops:
   kiran    Kiran Desktop + X410 for openEuler 25.09
@@ -24,6 +25,7 @@ EOF
 
 case "$desktop" in
     -h|--help) usage; exit 0 ;;
+    list) usage; exit 0 ;;
     kiran) ;;
     *) echo "Unsupported desktop: $desktop" >&2; usage >&2; exit 2 ;;
 esac
@@ -66,7 +68,7 @@ if ! command -v sudo >/dev/null 2>&1; then
     exit 1
 fi
 
-for command_name in systemctl wslpath dnf; do
+for command_name in systemctl wslpath dnf sha256sum; do
     if ! command -v "$command_name" >/dev/null 2>&1; then
         echo "Required base command is missing: $command_name" >&2
         exit 1
@@ -108,6 +110,13 @@ download() {
 }
 
 echo "Downloading Kiran/X410 launcher files ..."
+declare -A expected_sha256=(
+    [kiran-x410]="0bf4f71879025eb840ec5c980829ae8e38107239a79173ce56e210f5abd1a8a0"
+    [kiran-x410-session]="0467a6cbe711076ed29c5964adc7159d480efe45075477acd07de0546868aedb"
+    [kiran-x410.service]="9581ded2f4addbd3a0bf6b53bd8d254738f8a428a79d8905d98d49ca6be0c6ce"
+    [Start-Kiran-X410.ps1]="8654f0735b76779b6441ea15fb1cd1ddf8001b0ea278ab9c2594654bac3df583"
+    [Install-Windows-Shortcut.ps1]="d08e98e1978cd81678b36846498e114ecd5e85bbc26eb25f9e06724f758f26b3"
+)
 for file_name in \
     kiran-x410 \
     kiran-x410-session \
@@ -115,6 +124,11 @@ for file_name in \
     Start-Kiran-X410.ps1 \
     Install-Windows-Shortcut.ps1; do
     download "desktops/kiran/files/$file_name" "$tmp_dir/$file_name"
+    actual_sha256="$(sha256sum "$tmp_dir/$file_name" | awk '{print $1}')"
+    if [[ $actual_sha256 != "${expected_sha256[$file_name]}" ]]; then
+        echo "Checksum verification failed for $file_name; nothing was installed." >&2
+        exit 1
+    fi
 done
 
 bash -n "$tmp_dir/kiran-x410"

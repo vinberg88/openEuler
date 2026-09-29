@@ -24,8 +24,21 @@ Or download the published installer:
 
 ```bash
 wget https://raw.githubusercontent.com/vinberg88/openEuler/main/install.sh
+less install.sh
 bash install.sh kiran
 ```
+
+The installer verifies the SHA-256 digest of every downloaded launcher file before using it.
+
+## Uninstall the integration
+
+From the repository root:
+
+```bash
+bash uninstall.sh kiran
+```
+
+This keeps the Kiran packages, personal files and session logs.
 
 ## Why a managed launcher is needed
 

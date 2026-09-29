@@ -24,6 +24,8 @@ bash install.sh kiran
 
 The installer downloads the Kiran launcher files, installs the complete openEuler `kiran-desktop` package when needed, validates the environment, installs the Linux service and creates a **Kiran Desktop (X410)** shortcut on the Windows desktop.
 
+Every downloaded launcher file is checked against a SHA-256 digest embedded in the reviewed installer before it can be executed or installed.
+
 Keep download and execution as separate steps. Do not pipe a remote installer directly into a shell; downloading it first makes the exact code being granted installation privileges visible and reviewable.
 
 ## Requirements
@@ -47,6 +49,18 @@ kiran-x410 log
 ```
 
 For normal use, launch **Kiran Desktop (X410)** from the Windows desktop. The shortcut starts X410 in Desktop mode and keeps the WSL session alive for as long as Kiran is running.
+
+## Uninstall the integration
+
+Download and inspect the uninstaller, then run it as the same normal Linux user:
+
+```bash
+wget https://raw.githubusercontent.com/vinberg88/openEuler/main/uninstall.sh
+less uninstall.sh
+bash uninstall.sh kiran
+```
+
+This removes the launcher, user service and Windows shortcut. It deliberately keeps the openEuler `kiran-desktop` packages, personal files and session logs.
 
 ## Desktop collection
 
@@ -80,6 +94,7 @@ See [DESKTOPS.md](DESKTOPS.md) for the test standard and roadmap.
 ```text
 .
 ├── install.sh
+├── uninstall.sh
 ├── DESKTOPS.md
 ├── desktops/
 │   └── kiran/
