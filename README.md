@@ -24,11 +24,7 @@ bash install.sh kiran
 
 The installer downloads the Kiran launcher files, installs the complete openEuler `kiran-desktop` package when needed, validates the environment, installs the Linux service and creates a **Kiran Desktop (X410)** shortcut on the Windows desktop.
 
-For a compact one-liner after inspecting the repository:
-
-```bash
-wget -qO- https://raw.githubusercontent.com/vinberg88/openEuler/main/install.sh | bash -s -- kiran
-```
+Keep download and execution as separate steps. Do not pipe a remote installer directly into a shell; downloading it first makes the exact code being granted installation privileges visible and reviewable.
 
 ## Requirements
 
