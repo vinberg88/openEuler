@@ -1,0 +1,224 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+unit="kiran-x410.service"
+session_user="${KIRAN_X410_USER:-}"
+
+if [[ -z "$session_user" ]]; then
+    session_user="$(getent passwd 1000 | cut -d: -f1)"
+fi
+session_user="${session_user:-$(id -un)}"
+
+if [[ ${EUID} -eq 0 && ${USER:-root} != "$session_user" ]]; then
+    exec runuser -u "$session_user" -- /usr/local/bin/kiran-x410 "$@"
+fi
+
+host_ip() {
+    ip route show default | awk 'NR == 1 { print $3; exit }'
+}
+
+display_value() {
+    local ip
+    ip="$(host_ip)"
+    [[ -n "$ip" ]] || {
+        echo "Kunde inte hitta Windows-vardens IP-adress." >&2
+        return 1
+    }
+    printf '%s:0\n' "$ip"
+}
+
+x_ready() {
+    timeout 3 xdpyinfo -display "$1" >/dev/null 2>&1
+}
+
+start_x410_if_needed() {
+    local display="$1"
+    if x_ready "$display"; then
+        return 0
+    fi
+
+    if command -v x410.exe >/dev/null 2>&1; then
+        echo "Startar X410 i Desktop-lage ..."
+        x410.exe /desktop >/dev/null 2>&1 &
+        disown || true
+    fi
+
+    for _ in {1..20}; do
+        x_ready "$display" && return 0
+        sleep 0.5
+    done
+
+    echo "X410 svarar inte pa $display." >&2
+    echo "Starta X410 i Desktop-lage och kontrollera att Windows-brandvaggen tillater privat natverk." >&2
+    return 1
+}
+
+write_environment() {
+    local display="$1"
+    local env_file="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/kiran-x410.env"
+    umask 077
+    {
+        printf 'DISPLAY=%s\n' "$display"
+        printf 'XDG_SESSION_TYPE=x11\n'
+        printf 'XDG_CURRENT_DESKTOP=KIRAN\n'
+        printf 'XDG_SESSION_DESKTOP=kiran\n'
+        printf 'DESKTOP_SESSION=kiran\n'
+        printf 'GDK_BACKEND=x11\n'
+        printf 'QT_QPA_PLATFORM=xcb\n'
+        printf 'SDL_VIDEODRIVER=x11\n'
+        printf 'NO_AT_BRIDGE=1\n'
+        printf 'LIBGL_ALWAYS_SOFTWARE=1\n'
+        printf 'GALLIUM_DRIVER=llvmpipe\n'
+        if [[ -S /mnt/wslg/PulseServer ]]; then
+            printf 'PULSE_SERVER=unix:/mnt/wslg/PulseServer\n'
+        fi
+    } >"$env_file"
+}
+
+prepare_wsl_autostart() {
+    local autostart_dir="${XDG_CONFIG_HOME:-$HOME/.config}/autostart"
+    local desktop_file
+    mkdir -p "$autostart_dir"
+
+    # These applets either duplicate Windows functionality or open unusable
+    # authentication/lock dialogs in a WSL + X410 desktop session.
+    for desktop_file in \
+        kiran-network-status-icon.desktop \
+        kiran-screensaver.desktop \
+        print-applet.desktop \
+        sealertauto.desktop; do
+        if [[ ! -e "$autostart_dir/$desktop_file" ]]; then
+            printf '[Desktop Entry]\nType=Application\nHidden=true\n' >"$autostart_dir/$desktop_file"
+        fi
+    done
+}
+
+doctor() {
+    local display="$(display_value)"
+    local failed=0
+
+    echo "Kiran/X410-diagnos"
+    printf '  Anvandare:       %s (uid %s)\n' "$(id -un)" "$(id -u)"
+    printf '  Distribution:    %s\n' "$(. /etc/os-release; printf '%s' "$PRETTY_NAME")"
+    printf '  Windows-vard:    %s\n' "$(host_ip)"
+    printf '  X11-display:      %s\n' "$display"
+
+    for command_name in kiran-session-manager marco kiran-panel caja mate-settings-daemon xdpyinfo flock; do
+        command_path="$(command -v "$command_name" 2>/dev/null || true)"
+        if [[ -z "$command_path" && -x "/usr/libexec/$command_name" ]]; then
+            command_path="/usr/libexec/$command_name"
+        fi
+        if [[ -n "$command_path" ]]; then
+            printf '  [OK] %-24s %s\n' "$command_name" "$command_path"
+        else
+            printf '  [FEL] %-23s saknas\n' "$command_name"
+            failed=1
+        fi
+    done
+
+    if systemctl --user is-system-running >/dev/null 2>&1; then
+        echo "  [OK] systemd --user kor"
+    else
+        echo "  [FEL] systemd --user kor inte"
+        failed=1
+    fi
+
+    if x_ready "$display"; then
+        echo "  [OK] X410 svarar"
+    else
+        echo "  [FEL] X410 svarar inte"
+        failed=1
+    fi
+
+    if [[ -S /mnt/wslg/PulseServer ]]; then
+        echo "  [OK] WSLg-ljudserver finns"
+    else
+        echo "  [OBS] WSLg-ljudserver hittades inte"
+    fi
+
+    if systemctl --user is-active --quiet "$unit"; then
+        echo "  [OK] Kiran-sessionen ar aktiv"
+    else
+        echo "  [INFO] Kiran-sessionen ar inte startad"
+    fi
+
+    return "$failed"
+}
+
+start_session() {
+    local display
+    display="$(display_value)"
+    start_x410_if_needed "$display"
+    prepare_wsl_autostart
+    write_environment "$display"
+    systemctl --user daemon-reload
+    systemctl --user restart "$unit"
+
+    for _ in {1..16}; do
+        if systemctl --user is-active --quiet "$unit"; then
+            sleep 1
+            if systemctl --user is-active --quiet "$unit"; then
+                echo "Kiran Desktop kor nu i X410 pa $display."
+                echo "Logg: kiran-x410 log"
+                return 0
+            fi
+        fi
+        sleep 0.5
+    done
+
+    echo "Kiran-sessionen kunde inte starta. Senaste loggen:" >&2
+    journalctl --user -u "$unit" -n 80 --no-pager >&2
+    return 1
+}
+
+stop_session() {
+    systemctl --user stop "$unit"
+    echo "Kiran-sessionen ar stoppad. X410 lamnades oppet for andra X11-program."
+}
+
+show_status() {
+    local display
+    display="$(display_value)"
+    if x_ready "$display"; then
+        echo "X410: svarar pa $display"
+    else
+        echo "X410: svarar inte pa $display"
+    fi
+    systemctl --user status "$unit" --no-pager || true
+}
+
+run_holder() {
+    local lock_file="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/kiran-x410-holder.lock"
+    exec 9>"$lock_file"
+    if ! flock -n 9; then
+        echo "En Kiran/X410-vardprocess kor redan."
+        exit 0
+    fi
+
+    trap 'systemctl --user stop "$unit" >/dev/null 2>&1 || true' EXIT INT TERM
+    start_session
+    while systemctl --user is-active --quiet "$unit"; do
+        sleep 2
+    done
+}
+
+case "${1:-start}" in
+    start) start_session ;;
+    run) run_holder ;;
+    stop) stop_session ;;
+    restart) stop_session; start_session ;;
+    status) show_status ;;
+    doctor) doctor ;;
+    log)
+        log_file="${XDG_STATE_HOME:-$HOME/.local/state}/kiran-x410/session.log"
+        if [[ -f "$log_file" ]]; then
+            tail -n "${2:-200}" "$log_file"
+        else
+            echo "Ingen sessionslogg finns annu: $log_file"
+        fi
+        ;;
+    *)
+        echo "Anvandning: kiran-x410 {start|stop|restart|status|doctor|log [antal]}" >&2
+        exit 2
+        ;;
+esac
