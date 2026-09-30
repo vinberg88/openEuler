@@ -12,3 +12,10 @@ of openEuler to the foundation on November.
 https://github.com/vinberg88/ Find more stuff here for WSL and Linux.
 
 You can find openEuler 25.09 for wsl here to download: https://github.com/vinberg88/openEuler/releases
+
+Wallpapers you will find here - Just a test =?
+
+<p align="center">
+<a href="https://github.com/vinberg88">
+<img width="1168" height="784" alt="OpenEuler" src="https://github.com/user-attachments/assets/f4396c3d-aa13-49bd-bccd-4ce893fcea85" />
+</p>
