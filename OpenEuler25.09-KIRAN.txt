@@ -261,20 +261,24 @@ mesa:            23.1.0
 pulseaudio:      c33051f2296af748ac5cd13e51abfac4d129e4c7
 weston:          a7e35fdab455dce5774b43b8aff682f748307e31
 (Wayland)
-
 ------------------------------------------------------
 
 Install Visual Studio Code - 2026 - Microsoft Engine for Code - openEuler 25.09
 
-Use Microsoft's official Linux installation guide and RPM repository:
-https://code.visualstudio.com/docs/setup/linux
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 
+sudo dnf check-update &&
+sudo dnf install code 
+
+now run: sudo dnf install code
+ 
 -----------------------------------------------------
 
 Install Blanket - Listen to sounds - openEuler 25.09
 
-Use the verified Flathub package described in the next section:
-https://flathub.org/apps/com.rafaelmardojai.Blanket
+wget https://www.rpmfind.net/linux/opensuse/tumbleweed/repo/oss/noarch/blanket-0.8.0-1.4.noarch.rpm
+sudo dnf install ./blanket-0.8.0-1.4.noarch.rpm -y
 
 -----------------------------------------------------
 
