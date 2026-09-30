@@ -1,4 +1,4 @@
-# openEuler Desktop Collection for WSL
+# WSL - openEuler Desktop Collection.
 
 ![openEuler](https://img.shields.io/badge/openEuler-WSL-0A7B83?style=for-the-badge&logo=linux&logoColor=white)
 ![Windows 11](https://img.shields.io/badge/Windows_11-WSL_2-0078D4?style=for-the-badge&logo=windows11&logoColor=white)
