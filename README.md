@@ -107,6 +107,25 @@ Each future desktop receives its own installer assets and documentation under `d
 
 ## Troubleshooting
 
+### `powershell.exe: Permission denied`
+
+If the installer reaches the Windows shortcut step and reports that `powershell.exe` is not permitted, check `/etc/wsl.conf`. An automount option such as `fmask=11` removes the execute bit from Windows programs for normal Linux users. Change that option to:
+
+```ini
+[automount]
+enabled=true
+root=/mnt/
+options="metadata,umask=22,fmask=022"
+```
+
+Then close WSL and run this from **Windows PowerShell**:
+
+```powershell
+wsl --shutdown
+```
+
+Start openEuler again and rerun `bash install.sh kiran`. The installer is repeatable, so the partially completed first run does not need to be removed.
+
 Run:
 
 ```bash

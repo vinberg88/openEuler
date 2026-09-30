@@ -45,6 +45,13 @@ for command_name in sudo systemctl powershell.exe sha256sum wslpath; do
     fi
 done
 
+powershell_path="$(command -v powershell.exe 2>/dev/null || true)"
+if [[ ! -x "$powershell_path" ]]; then
+    echo "Windows PowerShell was found but is not executable by $(id -un): $powershell_path" >&2
+    echo "Check /etc/wsl.conf: use automount fmask=022, then restart WSL." >&2
+    exit 1
+fi
+
 distro_name="${WSL_DISTRO_NAME:-}"
 if [[ -z "$distro_name" ]]; then
     echo "WSL_DISTRO_NAME is missing. Start the uninstaller from a normal WSL terminal." >&2
@@ -91,7 +98,7 @@ systemctl --user daemon-reload
 systemctl --user reset-failed >/dev/null 2>&1 || true
 
 windows_helper="$(wslpath -w "$helper_path")"
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$windows_helper" -Distro "$distro_name"
+"$powershell_path" -NoProfile -ExecutionPolicy Bypass -File "$windows_helper" -Distro "$distro_name"
 
 autostart_dir="${XDG_CONFIG_HOME:-$HOME/.config}/autostart"
 for desktop_file in \
