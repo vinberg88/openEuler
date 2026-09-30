@@ -7,7 +7,7 @@ How to install Kiran Desktop via openEuler 25.09 - WSL - MOVIE via YOUTUBE
 YOUTUBE VIDEO GUIDE - COMING SOON
 The video link will be added here when the film is published.
 
-NOTE: THIS IS BETA INSTALL - KIRAN DESKTOP for OpenEuler-
+NOTE: THIS IS BETA INSTALL - KIRAN DESKTOP for OpenEuler 25.09
 
 IMPORTANT: The supported quick path is the reviewed install.sh workflow in README.md.
 The remaining commands in this long walkthrough include optional applications and
