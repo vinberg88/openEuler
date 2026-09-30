@@ -1,12 +1,19 @@
 OpenEuler 25.09 and Kiran Desktop - Install Kiran via openEuler and windows 11 - WSL - LINUX -  YouTUBE - 2026
 
 How to install Kiran Desktop via openEuler 25.09 - WSL - TEXT via GITHUB
-Comming ZONE.....
+This document is the complete text walkthrough.
 
 How to install Kiran Desktop via openEuler 25.09 - WSL - MOVIE via YOUTUBE
-Comming ZONE.....
+YOUTUBE VIDEO GUIDE - COMING SOON
+The video link will be added here when the film is published.
 
 NOTE: THIS IS BETA INSTALL - KIRAN DESKTOP for OpenEuler-
+
+IMPORTANT: The supported quick path is the reviewed install.sh workflow in README.md.
+The remaining commands in this long walkthrough include optional applications and
+advanced system changes. Read each command before running it and skip anything you
+do not need. Download scripts first, inspect them, and never pipe remote content
+directly into a shell.
 
 You can find openEuler 25.09 for wsl here: https://github.com/vinberg88/openEuler/releases
 
@@ -259,15 +266,15 @@ weston:          a7e35fdab455dce5774b43b8aff682f748307e31
 
 Install Visual Studio Code - 2026 - Microsoft Engine for Code - openEuler 25.09
 
-wget https://www.hardsexhub.com/youtube/code-1.120.0-1778619100.el8.x86_64.rpm
-sudo dnf install ./code-1.120.0-1778619100.el8.x86_64.rpm -y
+Use Microsoft's official Linux installation guide and RPM repository:
+https://code.visualstudio.com/docs/setup/linux
 
 -----------------------------------------------------
 
 Install Blanket - Listen to sounds - openEuler 25.09
 
-wget https://www.swehub.com/blanket/blanket-0.8.0-1.noarch.rpm
-sudo dnf install ./blanket-0.8.0-1.noarch.rpm -y
+Use the verified Flathub package described in the next section:
+https://flathub.org/apps/com.rafaelmardojai.Blanket
 
 -----------------------------------------------------
 

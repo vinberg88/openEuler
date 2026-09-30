@@ -3,6 +3,8 @@
 ![openEuler](https://img.shields.io/badge/openEuler-WSL-0A7B83?style=for-the-badge&logo=linux&logoColor=white)
 ![Windows 11](https://img.shields.io/badge/Windows_11-WSL_2-0078D4?style=for-the-badge&logo=windows11&logoColor=white)
 ![Kiran](https://img.shields.io/badge/Kiran-X410_tested-2EA3F2?style=for-the-badge)
+![Release](https://img.shields.io/github/v/release/vinberg88/openEuler?style=for-the-badge&label=Release)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
 A community collection for running complete openEuler desktop environments in WSL 2 on Windows.
 
@@ -10,7 +12,14 @@ The first tested desktop is **Kiran Desktop on openEuler 25.09 through X410**. T
 
 > This is a personal/community project. It is not an official openEuler, KylinSec, Microsoft or X410 project.
 
-![Kiran Desktop running on openEuler 25.09 in X410](images/openeuler-25.09-kiran-x410.png)
+![Kiran Desktop running on openEuler 25.09 in X410](images/OpenEuler25.09-KIRAN.png)
+
+## Installation walkthrough and video
+
+- [Complete Kiran installation walkthrough](OpenEuler25.09-KIRAN.txt)
+- **YouTube video guide:** coming soon
+
+The supported quick installer below is the shortest route. The longer walkthrough also covers the openEuler setup, optional desktop applications and the final X410 startup steps.
 
 ## Quick install: Kiran + X410
 
@@ -99,6 +108,8 @@ See [DESKTOPS.md](DESKTOPS.md) for the test standard and roadmap.
 
 ```text
 .
+├── LICENSE
+├── OpenEuler25.09-KIRAN.txt
 ├── install.sh
 ├── uninstall.sh
 ├── DESKTOPS.md
@@ -140,3 +151,7 @@ kiran-x410 log 200
 ```
 
 Do not start `kiran-session-manager`, `kiran-panel` or the desktop with `sudo`. Mixing root sessions, WSLg's display and X410 is the main cause of duplicated panels and unpredictable startup.
+
+## License
+
+The launcher, installer and repository documentation are available under the [MIT License](LICENSE). Third-party projects and packages retain their own licenses.
