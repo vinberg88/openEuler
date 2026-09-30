@@ -1,0 +1,473 @@
+OpenEuler 25.09 and Kiran Desktop - Install Kiran via openEuler and windows 11 - WSL - LINUX -  YouTUBE - 2026
+
+How to install Kiran Desktop via openEuler 25.09 - WSL - TEXT via GITHUB
+Comming ZONE.....
+
+How to install Kiran Desktop via openEuler 25.09 - WSL - MOVIE via YOUTUBE
+Comming ZONE.....
+
+NOTE: THIS IS BETA INSTALL - KIRAN DESKTOP for OpenEuler-
+
+You can find openEuler 25.09 for wsl here: https://github.com/vinberg88/openEuler/releases
+
+TOOLS THAT I USE FOR WSL and WINDOWS 11 - 2026 - Kiran Desktop
+
+X410 - Xserver for windows 11 - So you have a Desktop TO See in Windows 11.
+https://apps.microsoft.com/detail/9pm8lp83g3l3?hl=en-US&gl=US
+
+Raft WSL - Handel WSL image easy and Linux for WSL and Windows 11.
+https://apps.microsoft.com/detail/9msmjqd017x7?hl=en-US&gl=US
+
+WSL UI - This tool is free and works like Raft WSL.
+https://apps.microsoft.com/detail/9p8548knj2m9?hl=sv-SE&gl=SE
+
+                 `.cc.`                     
+             ``.cccccccc..`                 OS: openEuler 25.09 x86_64 for WSL.
+          `.cccccccccccccccc.`              
+      ``.cccccccccccccccccccccc.``          Host: Windows Subsystem for Linux - openEuler-25.09 (2.9.13.0)
+   `..cccccccccccccccccccccccccccc..`       
+`.ccccccccccccccc/++/ccccccccccccccccc.`    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
+.cccccccccccccccmNMMNdo+oso+ccccccccccc.    
+.cccccccccc/++odms+//+mMMMMm/:+syso/cccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    
+.ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc    Media Mattias Vinberg - Stockholm - Sweden - 2026
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    
+.cc/NMMMMMo////:c:///:cccccccccccccccccc    Desktops - Windows 11 and KIRAN desktop.
+.cc:syysyNMNNNMNyccccccccccccccccccccccc    
+.cccccccc+MMMMMNyc:/+++/cccccccccccccccc    OpenEuler 25.09: https://github.com/vinberg88/openEuler
+.cccccccccohhhs/comMMMMNhccccccccccccccc    
+.ccccccccccccccc:MMMMMMMM/cccccccccccccc    MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    
+`..cccccccccccccccc/+/:cccccccccccccc..`    OpenEuler 25.09: https://github.com/vinberg88/openEuler/releases
+   ``.cccccccccccccccccccccccccccc.``       
+       `.cccccccccccccccccccccc.`           More desktop for Linux and WSL: https://github.com/vinberg88
+          ``.cccccccccccccc.``
+              `.cccccccc.`                  Origin: Huawei - Base: RHEL/CentOS - RPM-based
+                 `....`            
+
+About openEuler 25.09 - https://www.openeuler.org/en
+
+OpenEuler is an open source project incubated and operated by the
+OpenAtom Foundation. EulerOS is a commercial Linux distribution developed
+by Huawei based on Red Hat Enterprise Linux. To provide an operating system
+for server and cloud environments. Its open-source community version
+is known as openEuler, of which source code was released by Huawei at
+Gitee on December 31, 2019. OpenEuler became an open-source project 
+operated by OpenAtom Foundation after Huawei donated the source code 
+of openEuler to the foundation on November.  
+
+About Kiran Desktop for openEuler 25.09 - https://www.openeuler.org/en
+
+AKylinsec OS is a high-security, highly reliable Linux-based
+operating system developed by Hunan Kylin Information Security
+Technology Co., Ltd. (Kylinsec), designed for critical
+infrastructure, government, and enterprise environments.
+
+Find More Stuff for WSL: https://github.com/vinberg88/openEuler
+
+Old Page for WSL: https://github.com/vinberg88/opensuse
+
+New page for WSL. Under DEV: https://github.com/vinberg88
+
+ABOUT WSL for WINDOWS via GITHUB - MY PAGE - https://vinberg88.github.io
+
+WSL, which stands for Windows Subsystem for Linux, is a compatibility
+layer created by Microsoft that permits users to operate a Linux environment
+directly on a Windows system without requiring a virtual machine or a
+dual-boot configuration.
+
+-----------------------------------
+
+Now lets start install of openEuler 25.09 and Kiran Desktop
+
+You can find openEuler 25.09 for wsl: https://github.com/vinberg88/openEuler/releases
+
+Press Blue Icon and you are almost done - Setup User and Password
+
+-----------------------------------
+
+AFTER INSTALLATION LOGIN AS ROOT and change password.
+
+Change adnolf to your username.
+
+sudo passwd root
+
+sudo passwd adolf
+
+-----------------------------------
+
+Install fast mirrors or repos for openEuler 25.09
+
+Run this first
+
+sudo sed -i -e 's|repo.openeuler.org/openEuler-25.09|mirrors.xtom.de/openeuler/openEuler-25.09|g' -e 's|^metalink=|#metalink=|g' /etc/yum.repos.d/openEuler.repo
+sudo sed -i 's/plugins=1/plugins=0/g' /etc/yum.conf
+sudo yum clean all && sudo yum makecache
+
+-----------------------------------
+
+Install fast Mirrors or Repos for openEuler 25.09
+
+Run this first
+
+sudo dnf check-update
+sudo dnf install dnf-utils nano
+
+Then do this..
+
+sudo nano /etc/dnf/dnf.conf
+
+Add the following line: max_parallel_downloads=10 and fastestmirror=True
+
+Like That..
+
+[main]
+gpgcheck=1
+installonly_limit=3
+clean_requirements_on_remove=True
+best=True
+skip_if_unavailable=False
+max_parallel_downloads=10
+fastestmirror=True
+
+------------------------------------------------------
+
+                 `.cc.`                     
+             ``.cccccccc..`                 OS: openEuler 25.09 x86_64 for WSL.
+          `.cccccccccccccccc.`              
+      ``.cccccccccccccccccccccc.``          Host: Windows Subsystem for Linux - openEuler-25.09 (2.9.13.0)
+   `..cccccccccccccccccccccccccccc..`       
+`.ccccccccccccccc/++/ccccccccccccccccc.`    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
+.cccccccccccccccmNMMNdo+oso+ccccccccccc.    
+.cccccccccc/++odms+//+mMMMMm/:+syso/cccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    
+.ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc    Media Mattias Vinberg - Stockholm - Sweden - 2026
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    
+.cc/NMMMMMo////:c:///:cccccccccccccccccc    Desktops - Windows 11 and KIRAN desktop.
+.cc:syysyNMNNNMNyccccccccccccccccccccccc    
+.cccccccc+MMMMMNyc:/+++/cccccccccccccccc    OpenEuler 25.09: https://github.com/vinberg88/openEuler
+.cccccccccohhhs/comMMMMNhccccccccccccccc    
+.ccccccccccccccc:MMMMMMMM/cccccccccccccc    MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    
+`..cccccccccccccccc/+/:cccccccccccccc..`    OpenEuler 25.09: https://github.com/vinberg88/openEuler/releases
+   ``.cccccccccccccccccccccccccccc.``       
+       `.cccccccccccccccccccccc.`           More desktop for Linux and WSL: https://github.com/vinberg88
+          ``.cccccccccccccc.``
+              `.cccccccc.`                  Origin: Huawei - Base: RHEL/CentOS - RPM-based
+                 `....`            
+
+More info about WSL and OpenEuler
+
+Architecture: x86_64 - Wayland
+Built: 2026-06-25 Time - 17:27
+OS: Microsoft Azure Linux 3.0
+wslg:            6942bb534b537302a7a22617261d9274db3cfa37
+DirectX-Headers: v1.608.0
+FreeRDP:         c4030980b29322a9cb2190711a5fadeeeb8b6a33
+mesa:            23.1.0
+pulseaudio:      c33051f2296af748ac5cd13e51abfac4d129e4c7
+weston:          a7e35fdab455dce5774b43b8aff682f748307e31
+(Wayland)
+
+------------------------------------------------------
+
+Update All by paste this in Console - OpenEuler 25.09 and KIRAN desktop - 2026
+
+sudo dnf upgrade --refresh
+
+-----------------------------------
+
+Reboot openEuler - Reboot openEuler - Reboot openEuler - Reboot openEuler
+
+-----------------------------------
+
+Install Kiran desktop for OpenEuler 25.09 - WSL
+
+
+This will take some time to install Kiran - Total download size: 1.1 G
+
+And downloaded and installed Kiran via opeEuler: 3.4 G
+
+
+sudo dnf install kiran-desktop
+
+sudo dnf install kiran*
+
+sudo systemctl set-default graphical.target
+
+-----------------------------------
+
+Install some basic programs for Kiran desktop openEuler 25.09.
+
+sudo dnf install wget git dnf-utils x11* dnf* yum-utils* dnf-plugins-core xorg* nano --allowerasing --skip-broken --nobest -y
+
+sudo dnf install ibus* git wget curl bash dracut net-tools dbus-x11 dbus* --skip-broken --nobest -y
+
+sudo dnf install pip* -y
+
+-----------------------------------
+
+Install Fastfetch - Its a must for openEuler for WSL - 2026
+
+Paste this in TERMINAL.
+
+wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.54.0/fastfetch-linux-amd64.rpm
+sudo dnf install ./fastfetch-linux-amd64.rpm
+
+
+Test by typing hyfetch in terminal: fastfetch
+
+
+                 `.cc.`                     
+             ``.cccccccc..`                 OS: openEuler 25.09 x86_64 for WSL.
+          `.cccccccccccccccc.`              
+      ``.cccccccccccccccccccccc.``          Host: Windows Subsystem for Linux - openEuler-25.09 (2.9.13.0)
+   `..cccccccccccccccccccccccccccc..`       
+`.ccccccccccccccc/++/ccccccccccccccccc.`    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
+.cccccccccccccccmNMMNdo+oso+ccccccccccc.    
+.cccccccccc/++odms+//+mMMMMm/:+syso/cccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    
+.ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc    Media Mattias Vinberg - Stockholm - Sweden - 2026
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    
+.cc/NMMMMMo////:c:///:cccccccccccccccccc    Desktops - Windows 11 and KIRAN desktop.
+.cc:syysyNMNNNMNyccccccccccccccccccccccc    
+.cccccccc+MMMMMNyc:/+++/cccccccccccccccc    OpenEuler 25.09: https://github.com/vinberg88/openEuler
+.cccccccccohhhs/comMMMMNhccccccccccccccc    
+.ccccccccccccccc:MMMMMMMM/cccccccccccccc    MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    
+`..cccccccccccccccc/+/:cccccccccccccc..`    OpenEuler 25.09: https://github.com/vinberg88/openEuler/releases
+   ``.cccccccccccccccccccccccccccc.``       
+       `.cccccccccccccccccccccc.`           More desktop for Linux and WSL: https://github.com/vinberg88
+          ``.cccccccccccccc.``
+              `.cccccccc.`                  Origin: Huawei - Base: RHEL/CentOS - RPM-based
+                 `....`            
+
+More info about WSL and OpenEuler
+
+Architecture: x86_64 - Wayland
+Built: 2026-06-25 Time - 17:27
+OS: Microsoft Azure Linux 3.0
+wslg:            6942bb534b537302a7a22617261d9274db3cfa37
+DirectX-Headers: v1.608.0
+FreeRDP:         c4030980b29322a9cb2190711a5fadeeeb8b6a33
+mesa:            23.1.0
+pulseaudio:      c33051f2296af748ac5cd13e51abfac4d129e4c7
+weston:          a7e35fdab455dce5774b43b8aff682f748307e31
+(Wayland)
+
+------------------------------------------------------
+
+Install Visual Studio Code - 2026 - Microsoft Engine for Code - openEuler 25.09
+
+wget https://www.hardsexhub.com/youtube/code-1.120.0-1778619100.el8.x86_64.rpm
+sudo dnf install ./code-1.120.0-1778619100.el8.x86_64.rpm -y
+
+-----------------------------------------------------
+
+Install Blanket - Listen to sounds - openEuler 25.09
+
+wget https://www.swehub.com/blanket/blanket-0.8.0-1.noarch.rpm
+sudo dnf install ./blanket-0.8.0-1.noarch.rpm -y
+
+-----------------------------------------------------
+
+Install FLATPAK and install some programs for Kiran and OpenEuler
+
+Copy and paste: sudo dnf install flatpak* -y
+
+Copy and paste: sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+Copy and paste: sudo flatpak install flathub com.rafaelmardojai.Blanket
+
+-----------------------------------------------------
+
+Install Google-Chrome - Best Browser for Linux - openEuler 25.09
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+sudo yum install ./google-chrome-stable_current_*.rpm -y
+sudo yum update google-chrome-stable
+
+-----------------------------------------------------
+
+Install Gimp so you can paint - openEuler 25.09
+
+sudo dnf install gimp -y
+
+-----------------------------------------------------
+
+Best Office App =) Install now - openEuler 25.09
+
+sudo dnf install libreoffice -y
+
+-----------------------------------------------------
+
+Install for openEuler 25.09 and KIRAN desktop =)
+
+sudo dnf install -y systemd* procps bind-utils iproute iputils nmap-ncat gtk*
+
+sudo dnf install dejavu-fonts liberation-fonts gnu-*-fonts google-*-fonts
+
+-----------------------------------------------------
+
+Install Graphics for openEuler - Copy and Paste in terminal - SHELL - BASH - CONSOLE.
+
+sudo dnf install gdm* lightdm*
+
+-----------------------------------------------------
+
+                 `.cc.`                     
+             ``.cccccccc..`                 OS: openEuler 25.09 x86_64 for WSL.
+          `.cccccccccccccccc.`              
+      ``.cccccccccccccccccccccc.``          Host: Windows Subsystem for Linux - openEuler-25.09 (2.9.13.0)
+   `..cccccccccccccccccccccccccccc..`       
+`.ccccccccccccccc/++/ccccccccccccccccc.`    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
+.cccccccccccccccmNMMNdo+oso+ccccccccccc.    
+.cccccccccc/++odms+//+mMMMMm/:+syso/cccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    
+.ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc    Media Mattias Vinberg - Stockholm - Sweden - 2026
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    
+.cc/NMMMMMo////:c:///:cccccccccccccccccc    Desktops - Windows 11 and KIRAN desktop.
+.cc:syysyNMNNNMNyccccccccccccccccccccccc    
+.cccccccc+MMMMMNyc:/+++/cccccccccccccccc    OpenEuler 25.09: https://github.com/vinberg88/openEuler
+.cccccccccohhhs/comMMMMNhccccccccccccccc    
+.ccccccccccccccc:MMMMMMMM/cccccccccccccc    MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    
+`..cccccccccccccccc/+/:cccccccccccccc..`    OpenEuler 25.09: https://github.com/vinberg88/openEuler/releases
+   ``.cccccccccccccccccccccccccccc.``       
+       `.cccccccccccccccccccccc.`           More desktop for Linux and WSL: https://github.com/vinberg88
+          ``.cccccccccccccc.``
+              `.cccccccc.`                  Origin: Huawei - Base: RHEL/CentOS - RPM-based
+                 `....`            
+
+More info about WSL and OpenEuler
+
+Architecture: x86_64 - Wayland
+Built: 2026-06-25 Time - 17:27
+OS: Microsoft Azure Linux 3.0
+wslg:            6942bb534b537302a7a22617261d9274db3cfa37
+DirectX-Headers: v1.608.0
+FreeRDP:         c4030980b29322a9cb2190711a5fadeeeb8b6a33
+mesa:            23.1.0
+pulseaudio:      c33051f2296af748ac5cd13e51abfac4d129e4c7
+weston:          a7e35fdab455dce5774b43b8aff682f748307e31
+(Wayland)
+
+----------------------------------------------------------------
+
+Install Tokyonight - GTK THEME.
+
+sudo dnf install gtk-murrine-engine sassc gnome-themes-extra -y
+git clone https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme.git Tokyonight
+cd Tokyonight
+cd themes
+./install.sh
+cd
+
+THIS IS A NICE THEME FOR openEuler.
+
+-----------------------------------------------------
+
+Copy and Paste in Terminal.
+
+sudo systemctl enable lightdm
+sudo systemctl set-default graphical.target
+
+------------------------------------------------------
+
+Fix IP problem for X410. Cant find screen problem. Look for ip adress in windows terminal / PowerShell: ipconfig
+
+NOTE - Importent to look for ip. Last lines are IP-numbers for WSL in POWERSHELL so x410 works.
+
+Save IP from Powershell here: 172.30.16.1
+
+NOW GO BACK TO openEuler 25.09 Terminal and paste this.
+
+sudo dnf install systemd-resolved
+
+sudo systemctl unmask systemd-resolved.service
+sudo systemctl enable systemd-resolved.service
+
+sudo ls -l /etc/resolv.conf
+sudo mv /etc/resolv.conf /tmp/resolv.conf.bak
+sudo nano /etc/resolv.conf
+
+nameserver 172.30.16.1 <-- put your ip here and add nameserver.
+
+sudo chattr +i /etc/resolv.conf
+sudo systemctl restart systemd-resolved
+sudo cat /etc/resolv.conf
+
+DONE - alot of problem fixed openEuler 25.09 and KIRAN desktop =]
+
+-----------------------------------------------------
+
+Type this in terminal and put your username there: sudo loginctl enable-linger adolf
+
+-----------------------------------------------------
+
+Install start Script for openEuler and Kiran desktop - 2026
+
+wget https://raw.githubusercontent.com/vinberg88/openEuler/main/install.sh
+
+less install.sh - press q and go to next step - Just for check Before install KIRAN Desktop.
+
+sudo nano /etc/wsl.conf
+
+change: options="metadata,umask=22,fmask=11" to options="metadata,umask=22,fmask=022"
+
+-----------------------------------------------------
+
+openEuler 25.09 - Reboot Linux - Reboot Linux - Reboot Linux - Reboot Linux - openEuler 25.09
+
+-----------------------------------------------------
+
+NOTE - Before install let x410 run when you install and dont close x410.
+
+Run this in terminal for OpenEuler to see that all works: powershell.exe -NoProfile -Command "Write-Output WSL-interop-OK"
+
+You will see in terminal: WSL-interop-OK
+
+Now install script: bash install.sh kiran
+
+-----------------------------------------------------
+
+Done =] Time to start KIRAN desktop and it will start via openEuler 25.09
+
+Importent dont Close x410 just let it be in backround =)
+
+Paste in terminal: export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+
+Use the "Kiran Desktop (X410)" shortcut on the Windows desktop to start Kiran :)
+
+
+              "Just wait it will start, it take some time to start Kiran desktop"
+
+-----------------------------------------------------
+
+                 `.cc.`                     
+             ``.cccccccc..`                 OS: openEuler 25.09 x86_64 for WSL.
+          `.cccccccccccccccc.`              
+      ``.cccccccccccccccccccccc.``          Host: Windows Subsystem for Linux - openEuler-25.09 (2.9.13.0)
+   `..cccccccccccccccccccccccccccc..`       
+`.ccccccccccccccc/++/ccccccccccccccccc.`    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
+.cccccccccccccccmNMMNdo+oso+ccccccccccc.    
+.cccccccccc/++odms+//+mMMMMm/:+syso/cccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    
+.ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc    Media Mattias Vinberg - Stockholm - Sweden - 2026
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    
+.cc/NMMMMMo////:c:///:cccccccccccccccccc    Desktops - Windows 11 and KIRAN desktop.
+.cc:syysyNMNNNMNyccccccccccccccccccccccc    
+.cccccccc+MMMMMNyc:/+++/cccccccccccccccc    OpenEuler 25.09: https://github.com/vinberg88/openEuler
+.cccccccccohhhs/comMMMMNhccccccccccccccc    
+.ccccccccccccccc:MMMMMMMM/cccccccccccccc    MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    
+`..cccccccccccccccc/+/:cccccccccccccc..`    OpenEuler 25.09: https://github.com/vinberg88/openEuler/releases
+   ``.cccccccccccccccccccccccccccc.``       
+       `.cccccccccccccccccccccc.`           More desktop for Linux and WSL: https://github.com/vinberg88
+          ``.cccccccccccccc.``
+              `.cccccccc.`                  Origin: Huawei - Base: RHEL/CentOS - RPM-based
+                 `....`            
+
+Regards Mattias Vinberg - openEuler 25.09 - Kiran desktop - Linux - WSL - X410 - Windows 11 - Sweden - 2026
+
+-----------------------------------------------------
