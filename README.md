@@ -12,6 +12,8 @@ The first tested desktop is **Kiran Desktop on openEuler 25.09 through X410**. T
 
 > This is a personal/community project. It is not an official openEuler, KylinSec, Microsoft or X410 project.
 
+---
+
 # WSL - openEuler via Kiran Desktop - 2026
 
 ![Kiran Desktop running on openEuler 25.09 in X410](images/OpenEuler25.09-KIRAN.png)
