@@ -30,6 +30,12 @@ bash install.sh kiran
 
 The installer verifies the SHA-256 digest of every downloaded launcher file before using it.
 
+## Normal start
+
+Start **Kiran Desktop (X410)** from the Windows desktop shortcut and wait a few seconds. The shortcut starts X410 in Desktop mode, launches the managed Kiran session and keeps WSL alive.
+
+Leave X410 running quietly in the Windows background or system tray for the entire session. X410 is the display server, so closing it also closes Kiran's graphical display. Do not run `kiran-session-manager` separately while the shortcut-managed session is active.
+
 ## Uninstall the integration
 
 From the repository root:

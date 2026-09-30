@@ -48,7 +48,13 @@ kiran-x410 doctor
 kiran-x410 log
 ```
 
-For normal use, launch **Kiran Desktop (X410)** from the Windows desktop. The shortcut starts X410 in Desktop mode and keeps the WSL session alive for as long as Kiran is running.
+## Normal start
+
+1. Double-click **Kiran Desktop (X410)** on the Windows desktop.
+2. Wait a few seconds while the shortcut starts X410 in Desktop mode and launches the managed Kiran session.
+3. Leave X410 running quietly in the Windows background or system tray for the entire Kiran session.
+
+X410 is the display server behind the desktop. It should not need a separate visible control window, but it must remain running while Kiran is in use. Do not start `kiran-session-manager` manually alongside the shortcut, because that can create duplicate panels and unpredictable sessions.
 
 ## Uninstall the integration
 
