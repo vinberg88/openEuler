@@ -80,7 +80,7 @@ else
     exit 1
 fi
 
-actual_sha256="$(sha256sum "$helper_path" | awk '{print $1}')"
+actual_sha256="$(sed 's/\r$//' "$helper_path" | sha256sum | awk '{print $1}')"
 if [[ $actual_sha256 != "$helper_sha256" ]]; then
     echo "Checksum verification failed for $helper_name; nothing was removed." >&2
     exit 1

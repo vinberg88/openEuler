@@ -80,17 +80,19 @@ if ! command -v wget >/dev/null 2>&1 && ! command -v curl >/dev/null 2>&1; then
     exit 1
 fi
 
-powershell_path="$(command -v powershell.exe 2>/dev/null || true)"
-if [[ -z "$powershell_path" ]]; then
-    echo "Windows PowerShell interop is unavailable in this WSL distribution." >&2
-    exit 1
-fi
+if [[ $mode != "--check" ]]; then
+    powershell_path="$(command -v powershell.exe 2>/dev/null || true)"
+    if [[ -z "$powershell_path" ]]; then
+        echo "Windows PowerShell interop is unavailable in this WSL distribution." >&2
+        exit 1
+    fi
 
-if [[ ! -x "$powershell_path" ]]; then
-    echo "Windows PowerShell was found but is not executable by $(id -un): $powershell_path" >&2
-    echo "Check /etc/wsl.conf: an automount fmask such as fmask=11 removes the execute bit." >&2
-    echo "Use fmask=022, then run 'wsl --shutdown' from Windows PowerShell and try again." >&2
-    exit 1
+    if [[ ! -x "$powershell_path" ]]; then
+        echo "Windows PowerShell was found but is not executable by $(id -un): $powershell_path" >&2
+        echo "Check /etc/wsl.conf: an automount fmask such as fmask=11 removes the execute bit." >&2
+        echo "Use fmask=022, then run 'wsl --shutdown' from Windows PowerShell and try again." >&2
+        exit 1
+    fi
 fi
 
 distro_name="${WSL_DISTRO_NAME:-}"
@@ -132,7 +134,9 @@ for file_name in \
     Start-Kiran-X410.ps1 \
     Install-Windows-Shortcut.ps1; do
     download "desktops/kiran/files/$file_name" "$tmp_dir/$file_name"
-    actual_sha256="$(sha256sum "$tmp_dir/$file_name" | awk '{print $1}')"
+    # Git stores the text assets with LF while a Windows checkout may expose
+    # PowerShell files with CRLF. Verify identical text independent of EOL style.
+    actual_sha256="$(sed 's/\r$//' "$tmp_dir/$file_name" | sha256sum | awk '{print $1}')"
     if [[ $actual_sha256 != "${expected_sha256[$file_name]}" ]]; then
         echo "Checksum verification failed for $file_name; nothing was installed." >&2
         exit 1
