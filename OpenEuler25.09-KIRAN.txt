@@ -269,9 +269,7 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 
 sudo dnf check-update &&
-sudo dnf install code 
-
-now run: sudo dnf install code
+sudo dnf install code .y
  
 -----------------------------------------------------
 
@@ -420,7 +418,7 @@ Install start Script for openEuler and Kiran desktop - 2026
 
 wget https://raw.githubusercontent.com/vinberg88/openEuler/main/install.sh
 
-less install.sh - press q and go to next step - Just for check Before install KIRAN Desktop.
+RUN THIS: less install.sh - press q and go to next step - Just for check Before install KIRAN Desktop.
 
 sudo nano /etc/wsl.conf
 
@@ -434,7 +432,7 @@ openEuler 25.09 - Reboot Linux - Reboot Linux - Reboot Linux - Reboot Linux - op
 
 NOTE - Before install let x410 run when you install and dont close x410.
 
-Run this in terminal for OpenEuler to see that all works: powershell.exe -NoProfile -Command "Write-Output WSL-interop-OK"
+Run this in POWERSHELL for Windows 11 to see that all works: powershell.exe -NoProfile -Command "Write-Output WSL-interop-OK"
 
 You will see in terminal: WSL-interop-OK
 
