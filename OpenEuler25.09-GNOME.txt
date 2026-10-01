@@ -4,7 +4,7 @@ How to install GNOME Desktop via openEuler 25.09 - WSL - TEXT via GITHUB.
 https://github.com/vinberg88/openEuler/blob/main/OpenEuler25.09-GNOME.txt
 
 How to install GNOME Desktop via openEuler 25.09 - WSL - MOVIE VIA YouTUBE.
-WORKING ON THAT...
+https://www.youtube.com/watch?v=9MUJaIaQZ9I
 
 Download openEuler here: https://github.com/vinberg88/openEuler/releases
 
