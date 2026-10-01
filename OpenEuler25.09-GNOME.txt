@@ -1,7 +1,7 @@
 OpenEuler 25.09 and GNOME - Install GNOME Desktop via openEuler and windows - WSL - Windows 11 - LINUX - 2026
 
 How to install GNOME Desktop via openEuler 25.09 - WSL - TEXT via GITHUB.
-WORKING ON THAT...
+https://github.com/vinberg88/openEuler/blob/main/OpenEuler25.09-GNOME.txt
 
 How to install GNOME Desktop via openEuler 25.09 - WSL - MOVIE VIA YouTUBE.
 WORKING ON THAT...
