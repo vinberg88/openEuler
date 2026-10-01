@@ -14,7 +14,7 @@ The first tested desktop is **Kiran Desktop on openEuler 25.09 through X410**. T
 
 ---
 
-# Next project - KDE 6 and openEuler - WSL - 2026
+# Next project - KDE 5 and openEuler - WSL - 2026
 
 Working on that right now.. Comming project for openEuler  25.09 
 
