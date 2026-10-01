@@ -1,0 +1,422 @@
+OpenEuler 25.09 and GNOME - Install GNOME Desktop via openEuler and windows - WSL - Windows 11 - LINUX - 2026
+
+How to install GNOME Desktop via openEuler 25.09 - WSL - TEXT via GITHUB.
+WORKING ON THAT...
+
+How to install GNOME Desktop via openEuler 25.09 - WSL - MOVIE VIA YouTUBE.
+WORKING ON THAT...
+
+Download openEuler here: https://github.com/vinberg88/openEuler/releases
+
+TOOLS THAT I USE FOR WSL and WINDOWS 11 - GNOME Desktop - x410 - 2026
+
+X410 - Xserver for windows 11 - So you have a Desktop TO See in Windows 11.
+https://apps.microsoft.com/detail/9pm8lp83g3l3?hl=en-US&gl=US
+
+Raft WSL - Handel WSL image easy and Linux for WSL and Windows 11.
+https://apps.microsoft.com/detail/9msmjqd017x7?hl=en-US&gl=US
+
+WSL UI - This tool is free and works like Raft WSL.
+https://apps.microsoft.com/detail/9p8548knj2m9?hl=sv-SE&gl=SE
+
+                 `.cc.`                     
+             ``.cccccccc..`                 
+          `.cccccccccccccccc.`              MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
+      ``.cccccccccccccccccccccc.``          
+   `..cccccccccccccccccccccccccccc..`       GNOME DESKTOP FOR WSL AND WINDOWS 11 - 2026
+`.ccccccccccccccc/++/ccccccccccccccccc.`    
+.cccccccccccccccmNMMNdo+oso+ccccccccccc.    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
+.cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-25.09 (2.9.13.0)
+.ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 25.09 x86_64 - ROG Strix
+.cc/NMMMMMo////:c:///:cccccccccccccccccc    
+.cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
+.cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
+.cccccccccohhhs/comMMMMNhccccccccccccccc    Download openEuler here: https://github.com/vinberg88/openEuler/releases
+.ccccccccccccccc:MMMMMMMM/cccccccccccccc    
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: matttiasvinberg@duck.com
+`..cccccccccccccccc/+/:cccccccccccccc..`    
+   ``.cccccccccccccccccccccccccccc.``       More desktop for WSL: https://github.com/vinberg88
+       `.cccccccccccccccccccccc.`          
+          ``.cccccccccccccc.``              Old Page for WSL - https://github.com/vinberg88/opensuse
+              `.cccccccc.`                             
+                 `....`
+
+MEDIA MATTIAS VINBERG - https://github.com/vinberg88 - SWEDEN 2026
+
+About openEuler 25.09 - https://www.openeuler.org/en
+
+OpenEuler is an open source project incubated and
+operated by the OpenAtom Foundation. EulerOS is a 
+commercial Linux distribution developed by Huawei 
+based on Red Hat Enterprise Linux. To provide an 
+operating system for server and cloud environments.
+Its open-source community version is known as
+openEuler, of which source code was released by
+Huawei at Gitee on December 31, 2019. OpenEuler
+became an open-source project operated by OpenAtom
+Foundation after Huawei donated the source code
+of openEuler to the foundation on November.  
+
+About Gnome Desktop for openEuler - https://www.gnome.org
+
+Every part of GNOME has been designed to make it simple
+and easy to use. The Activities Overview is a simple
+way to access all your basic tasks. A press of a button
+is all it takes to view your open windows, launch
+applications, or check if you have new messages. Having
+everything in one convenient place means you don’t have
+to learn your way around a maze of different technologies. 
+GNOME provides a focused working environment that helps
+you get things done. It is packed with features that
+will make you more productive: a powerful search feature
+that helps you access all your work from one place;
+side-by-side windows that make it easy to view several
+documents at the same time; seamless integration with 
+online accounts which allows you to access all your data
+in one place; and a messaging system that comfortably
+deals with notifications, letting you quickly respond
+in place or return to them in a convenient time.
+
+Find More Stuff for WSL: https://github.com/vinberg88/openEuler
+
+Old Page for WSL: https://github.com/vinberg88/opensuse
+
+New page for WSL. Under DEV: https://github.com/vinberg88
+
+ABOUT WSL for WINDOWS via GITHUB - https://vinberg88.github.io
+
+WSL, which stands for Windows Subsystem for Linux, is a
+compatibility layer created by Microsoft that permits
+users to operate a Linux Environment directly on a
+Windows system without requiring a virtual machine or
+a dual-boot configuration.
+
+-----------------------------------
+
+LETS START INSTALL OF GNOME DESKTOP VIA openEuler 25.09
+
+Download openEuler here - EASY SETUP - 2026
+
+https://github.com/vinberg88/openEuler/releases
+
+-----------------------------------
+
+AFTER INSTALLATION - Change password for Root and User - Gnome will work better if you so this
+
+Change adnolf to your username.
+
+sudo passwd root
+sudo passwd adolf
+
+-----------------------------------
+
+Install fast mirrors or repos for openEuler 25.09 - GNOME desktop
+
+Run this first in terminal - 2026
+
+sudo sed -i -e 's|repo.openeuler.org/openEuler-25.09|mirrors.xtom.de/openeuler/openEuler-25.09|g' -e 's|^metalink=|#metalink=|g' /etc/yum.repos.d/openEuler.repo
+sudo sed -i 's/plugins=1/plugins=0/g' /etc/yum.conf
+sudo yum clean all && sudo yum makecache
+
+-----------------------------------
+
+Update All by paste this in Console - openEuler 25.09
+
+sudo dnf upgrade --refresh
+
+-----------------------------------
+
+                 `.cc.`                     
+             ``.cccccccc..`                 
+          `.cccccccccccccccc.`              MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
+      ``.cccccccccccccccccccccc.``          
+   `..cccccccccccccccccccccccccccc..`       GNOME DESKTOP FOR WSL AND WINDOWS 11 - 2026
+`.ccccccccccccccc/++/ccccccccccccccccc.`    
+.cccccccccccccccmNMMNdo+oso+ccccccccccc.    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
+.cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-25.09 (2.9.13.0)
+.ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 25.09 x86_64 - ROG Strix
+.cc/NMMMMMo////:c:///:cccccccccccccccccc    
+.cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
+.cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
+.cccccccccohhhs/comMMMMNhccccccccccccccc    Download openEuler here: https://github.com/vinberg88/openEuler
+.ccccccccccccccc:MMMMMMMM/cccccccccccccc    
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: matttiasvinberg@duck.com
+`..cccccccccccccccc/+/:cccccccccccccc..`    
+   ``.cccccccccccccccccccccccccccc.``       More desktop for WSL: https://github.com/vinberg88
+       `.cccccccccccccccccccccc.`          
+          ``.cccccccccccccc.``              Old Page for WSL - https://github.com/vinberg88/opensuse
+              `.cccccccc.`                             
+                 `....`                     Download openEuler here: https://github.com/vinberg88/openEuler/releases
+                                            
+-----------------------------------
+
+Install faster mirrors or repos for openEuler 25.09
+
+sudo dnf install nano
+
+sudo nano /etc/dnf/dnf.conf
+
+Add the following line: max_parallel_downloads=10 and fastestmirror=True
+
+Like That in Console.
+
+max_parallel_downloads=10
+fastestmirror=True
+
+-----------------------------------
+
+REBOOT openEuler 25.09 - REBOOT openEuler 25.09 - REBOOT openEuler 25.09
+
+-----------------------------------
+
+Install some programs for openEuler 25.09 and GNOME.
+
+sudo dnf check-update
+sudo dnf install wget git dnf-utils x11* dnf* yum-utils* dnf-plugins-core xorg* nano --allowerasing --skip-broken --nobest -y
+
+-----------------------------------
+
+Install some basic programs for GNOME and openEuler 25.09.
+
+sudo dnf install wget git bash sudo curl npm dracut net-tools dbus-x11 dbus* yum -y
+
+-----------------------------------
+
+Install fastfetch - Its a must for openEuler 25.09
+
+wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.65.2/fastfetch-linux-amd64.rpm
+sudo dnf install ./fastfetch-linux-amd64.rpm
+
+Test by typing hyfetch in terminal: fastfetch
+
+
+                 `.cc.`                     
+             ``.cccccccc..`                 
+          `.cccccccccccccccc.`              MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
+      ``.cccccccccccccccccccccc.``          
+   `..cccccccccccccccccccccccccccc..`       GNOME DESKTOP FOR WSL AND WINDOWS 11 - 2026
+`.ccccccccccccccc/++/ccccccccccccccccc.`    
+.cccccccccccccccmNMMNdo+oso+ccccccccccc.    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
+.cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-25.09 (2.9.13.0)
+.ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 25.09 x86_64 - ROG Strix
+.cc/NMMMMMo////:c:///:cccccccccccccccccc    
+.cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
+.cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
+.cccccccccohhhs/comMMMMNhccccccccccccccc    Download openEuler here: https://github.com/vinberg88/openEuler
+.ccccccccccccccc:MMMMMMMM/cccccccccccccc    
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: matttiasvinberg@duck.com
+`..cccccccccccccccc/+/:cccccccccccccc..`    
+   ``.cccccccccccccccccccccccccccc.``       More desktop for WSL: https://github.com/vinberg88
+       `.cccccccccccccccccccccc.`          
+          ``.cccccccccccccc.``              Old Page for WSL - https://github.com/vinberg88/opensuse
+              `.cccccccc.`                             
+                 `....`                     Download openEuler here: https://github.com/vinberg88/openEuler/releases
+
+-----------------------------------
+
+Install Visual Studio Code - 2026 - Microsoft Engine for Code - openEuler 25.09
+
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+
+sudo dnf check-update &&
+sudo dnf install code -y
+
+-----------------------------------
+
+Install Google-Chrome - Paste all under this paragraph in terminal for GNOME desktop.
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+sudo yum install ./google-chrome-stable_current_*.rpm
+sudo yum update google-chrome-stable
+
+-----------------------------------
+
+Time to install Gnome Desktop for openEuler 25.09
+
+sudo dnf install -y systemd procps bind-utils iproute iputils nmap-ncat
+
+sudo dnf install dejavu-fonts liberation-fonts gnu-*-fonts google-*-fonts
+
+sudo dnf install abattis-cantarell-fonts cheese clutter clutter-gst3 clutter-gtk cogl dconf -y
+sudo dnf install dconf-editor devhelp eog epiphany evince evolution-data-server file-roller folks -y
+sudo dnf install gcab gcr gdk-pixbuf2 gdm gedit geocode-glib gfbgraph gjs glib2 glibmm24 -y
+sudo dnf install glib-networking gmime30 gnome-autoar gnome-backgrounds gnome-bluetooth -y
+sudo dnf install gnome-calculator gnome-calendar gnome-characters -y
+sudo dnf install gnome-clocks gnome-color-manager gnome-contacts gnome-control-center -y
+sudo dnf install gnome-desktop3 gnome-disk-utility gnome-font-viewer gnome-getting-started-docs -y
+sudo dnf install gnome-initial-setup gnome-keyring gnome-logs gnome-menus gnome-music -y
+sudo dnf install gnome-online-accounts gnome-online-miners gnome-photos gnome-remote-desktop -y
+sudo dnf install gnome-screenshot gnome-session gnome-settings-daemon gnome-shell -y
+sudo dnf install gnome-shell-extensions gnome-software gnome-system-monitor gnome-terminal -y
+sudo dnf install gnome-tour gnome-user-docs gnome-user-share gnome-video-effects -y
+sudo dnf install gnome-weather gobject-introspection gom grilo grilo-plugins -y
+sudo dnf install gsettings-desktop-schemas gsound gspell gssdp gtk3 gtk4 gtk-doc gtkmm30 -y
+sudo dnf install gtksourceview4 gtk-vnc2 gupnp gupnp-av gupnp-dlna gvfs json-glib libchamplain -y
+sudo dnf install libdazzle libgdata libgee libgnomekbd libgsf libgtop2 libgweather libgxps libhandy -y
+sudo dnf install libmediaart libnma libnotify libpeas librsvg2 libsecret libsigc++20 libsoup -y
+sudo dnf install mm-common mutter nautilus orca pango pangomm libphodav python3-pyatspi -y
+sudo dnf install python3-gobject rest simple-scan sushi sysprof tepl totem totem-pl-parser -y
+sudo dnf install tracker3 tracker3-miners vala vte291 yelp yelp-tools -y
+sudo dnf install yelp-xsl zenity -y
+
+-----------------------------------------------------
+
+Install Blanket - Listen to sounds - openEuler 25.09
+
+wget https://www.rpmfind.net/linux/opensuse/tumbleweed/repo/oss/noarch/blanket-0.8.0-1.4.noarch.rpm
+sudo dnf install ./blanket-0.8.0-1.4.noarch.rpm -y
+
+-----------------------------------------------------
+
+Install FLATPAK and install some program - openEuler 25.09
+
+Copy and paste: sudo dnf install flatpak* -y
+
+Copy and paste: sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+Copy and paste: sudo flatpak install flathub com.rafaelmardojai.Blanket
+
+copy and Paste: sudo flatpak install flathub com.mattjakeman.ExtensionManager
+
+-----------------------------------------------------------
+
+Install Graphics - Copy and Paste in terminal - SHELL - BASH - CONSOLE - openEuler 25.09
+
+sudo dnf install gdm*
+
+----------------------------------------------------------------
+
+Last files to copy to terminal - GNOME - full installation - openEuler 25.09
+
+sudo dnf install gnome* --skip-broken --nobest
+
+----------------------------------------------------------------
+
+Install Gnome-tweaks for openEuler 25.09 and Gnome desktop - 2026
+ 
+wget wget https://rpmfind.net/linux/openmandriva/6.0/repository/x86_64/main/release/gnome-tweaks-42.beta-1-omv4090.noarch.rpm
+sudo  dnf install ./gnome-tweaks-42.beta-1-omv4090.noarch.rpm
+
+----------------------------------------------------------------
+
+Copy and Paste in Terminal - openEuler 25.09
+
+sudo systemctl enable gdm
+sudo systemctl set-default graphical.target
+
+----------------------------------------------------------------
+
+Install Gimp so you can paint - openEuler 25.09
+
+sudo dnf install gimp -y
+
+-----------------------------------
+
+Best Office App =) Install now - openEuler 25.09
+
+sudo dnf install libreoffice -y
+
+------------------------------------------------------
+
+Fix IP problem for X410. Cant find screen. Look for ip adress in windows terminal / PowerShell
+
+OPEN POWERSHELL AND PASTE THIS: ipconfig
+
+Last lines are IP-numbers for WSL in POWERSHELL so x410 works.
+
+SAVE IP FROM POWERSHELL HERE: 172.30.16.1
+
+NOW GO BACK TO openEuler 25.09 Terminal and paste this.
+
+sudo dnf install systemd-resolved systemd*
+
+sudo systemctl unmask systemd-resolved.service
+sudo systemctl enable systemd-resolved.service
+
+sudo ls -l /etc/resolv.conf
+sudo mv /etc/resolv.conf /tmp/resolv.conf.bak
+sudo nano /etc/resolv.conf
+
+nameserver 172.30.16.1 <-- put your ip here from powershell and add nameserver.
+
+sudo chattr +i /etc/resolv.conf
+sudo systemctl restart systemd-resolved
+sudo cat /etc/resolv.conf
+
+DONE - alot of problem fixed openEuler 25.09 and GNOME desktop =]
+
+-------------------------------------------------------------
+
+Install this to for openEuler 25.09
+
+sudo dnf install sassc optipng glib2-devel -y
+
+-------------------------------------------------------------
+
+openEuler 25.09 - Type in terminal: sudo nano ~/.bash_gnome_desktop
+
+Paste this in terminal and save:
+
+export XDG_SESSION_TYPE=x11
+export XDG_SESSION_CLASS=user
+export GDK_BACKEND=x11
+
+export LIBGL_ALWAYS_SOFTWARE=1
+
+----------------------------------------------------------------
+
+openEuler 25.09 - Reboot Linux - Reboot Linux - Reboot Linux - Reboot Linux - openEuler 25.09
+
+----------------------------------------------------------------
+
+Time to start Gnome Desktop and it will start via openEuler 25.09 - MAGIC =)
+
+
+NOTE - Start X410 for windows 11 and later start OpenEuler 25.09 via terminal.
+
+
+Paste in terminal: export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+
+Paste in terminal: . ~/.bash_gnome_desktop
+
+Paste in terminal: gnome-session
+
+
+              " Just wait it will start - OpenEuler 25.09 "
+
+--------------------------------------------------------------
+
+                 `.cc.`                     
+             ``.cccccccc..`                 
+          `.cccccccccccccccc.`              MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
+      ``.cccccccccccccccccccccc.``          
+   `..cccccccccccccccccccccccccccc..`       GNOME DESKTOP FOR WSL AND WINDOWS 11 - 2026
+`.ccccccccccccccc/++/ccccccccccccccccc.`    
+.cccccccccccccccmNMMNdo+oso+ccccccccccc.    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
+.cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-25.09 (2.9.13.0)
+.ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 25.09 x86_64 - ROG Strix
+.cc/NMMMMMo////:c:///:cccccccccccccccccc    
+.cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
+.cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
+.cccccccccohhhs/comMMMMNhccccccccccccccc    Download openEuler here: https://github.com/vinberg88/openEuler
+.ccccccccccccccc:MMMMMMMM/cccccccccccccc    
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: matttiasvinberg@duck.com
+`..cccccccccccccccc/+/:cccccccccccccc..`    
+   ``.cccccccccccccccccccccccccccc.``       More desktop for WSL: https://github.com/vinberg88
+       `.cccccccccccccccccccccc.`          
+          ``.cccccccccccccc.``              
+              `.cccccccc.`                             
+                 `....`
+
+Regards Mattias Vinberg - openEuler 25.09 - DEEPIN - Linux - WSL - X410 - Windows 11 - Sweden - 2026
+
+----------------------------------------------------------------
