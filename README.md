@@ -58,7 +58,7 @@ How to install GNOME deskop on openEuler 25.09
 </p>
 
 - [Install GNOME desktop via openEuler](OpenEuler25.09-GNOME.txt)
-- **YouTube video guide:** [How to install GNOME via openEuler](https://www.youtube.com/watch?v=2XqTazXq5JY)
+- **YouTube video guide:** [How to install GNOME via openEuler](https://www.youtube.com/watch?v=9MUJaIaQZ9I)
 
 About Gnome desktop - https://www.gnome.org
 
