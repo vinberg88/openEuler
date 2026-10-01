@@ -13,6 +13,41 @@ The first tested desktop is **Kiran Desktop on openEuler 25.09 through X410**. T
 > This is a personal/community project. It is not an official openEuler, KylinSec, Microsoft or X410 project.
 
 ---
+
+# Next project - KDE 6 and openEuler - WSL - 2026
+
+Working on that right now.. Comming project for openEuler  25.09 
+
+About OpenEuler 25.09 - https://www.openeuler.org/en
+
+OpenEuler is an open source project incubated and operated
+by the OpenAtom Foundation. EulerOS is a commercial Linux
+distribution developed by Huawei based on Red Hat
+Enterprise Linux. To provide an operating system for
+server and cloud environments. Its open-source Community
+version is known as openEuler, of which source code was
+released by Huawei at Gitee on December 31, 2019. OpenEuler
+became an open-source project operated by OpenAtom
+Foundation after Huawei donated the source code of
+openEuler to the foundation on November.  
+
+<p align="center">
+<a href="https://github.com/vinberg88">
+<img width="1920" height="1080" alt="openEuler 25.09 KDE" src="https://github.com/user-attachments/assets/20384504-3175-48a2-8131-63b4e8e0e640" />
+</p>
+
+What is KDE - Desktop - https://kde.org
+
+Use Plasma to surf the web; keep in touch with colleagues, 
+friends and family; manage your files, enjoy music and
+videos; and get creative and productive at work. Do it all
+in a beautiful Environment that adapts to your needs,
+and with the safety, privacy-protection and peace of mind
+that the best Free Open Source Software has to offer. KDE
+Plasma is a Desktop for next life =)
+
+---
+
 # WSL - OpenEuler via GNOME Desktop - 2026
 
 How to install GNOME deskop on openEuler 25.09
