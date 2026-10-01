@@ -29,7 +29,7 @@ https://apps.microsoft.com/detail/9p8548knj2m9?hl=sv-SE&gl=SE
 .cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
 .cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-25.09 (2.9.13.0)
 .ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
-.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 25.09 x86_64 - ROG Strix
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 25.09 x86_64 - ROG Strix - Gnome Dekstop
 .cc/NMMMMMo////:c:///:cccccccccccccccccc    
 .cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
 .cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
@@ -138,7 +138,7 @@ sudo dnf upgrade --refresh
 .cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
 .cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-25.09 (2.9.13.0)
 .ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
-.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 25.09 x86_64 - ROG Strix
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 25.09 x86_64 - ROG Strix - Gnome Dekstop
 .cc/NMMMMMo////:c:///:cccccccccccccccccc    
 .cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
 .cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
@@ -204,7 +204,7 @@ Test by typing hyfetch in terminal: fastfetch
 .cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
 .cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-25.09 (2.9.13.0)
 .ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
-.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 25.09 x86_64 - ROG Strix
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 25.09 x86_64 - ROG Strix - Gnome Dekstop
 .cc/NMMMMMo////:c:///:cccccccccccccccccc    
 .cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
 .cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
@@ -403,7 +403,7 @@ Paste in terminal: gnome-session
 .cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
 .cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-25.09 (2.9.13.0)
 .ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
-.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 25.09 x86_64 - ROG Strix
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 25.09 x86_64 - ROG Strix - Gnome Dekstop
 .cc/NMMMMMo////:c:///:cccccccccccccccccc    
 .cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
 .cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
@@ -417,6 +417,6 @@ Paste in terminal: gnome-session
               `.cccccccc.`                             
                  `....`
 
-Regards Mattias Vinberg - openEuler 25.09 - DEEPIN - Linux - WSL - X410 - Windows 11 - Sweden - 2026
+Regards Mattias Vinberg - openEuler 25.09 - Gnome Dekstop - Linux - WSL - X410 - Windows 11 - Sweden - 2026
 
 ----------------------------------------------------------------
