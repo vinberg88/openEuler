@@ -112,7 +112,7 @@ This removes the launcher, user service and Windows shortcut. It deliberately ke
 |---|---:|---|---|
 | Kiran Desktop | 25.09 | X410 / X11 | ✅ Tested |
 | UKUI | To be selected | X410 / X11 | 🧪 Planned |
-| GNOME | To be selected | WSLg or X410 | 🧪 Planned |
+| GNOME | 25.09 | WSLg or X410 | ✅ Tested |
 | KDE Plasma | To be selected | X410 / X11 | 🧪 Planned |
 | XFCE | To be selected | X410 / X11 | 🧪 Planned |
 | Deepin Desktop | To be selected | X410 / X11 | 🧪 Planned |
@@ -180,6 +180,11 @@ kiran-x410 log 200
 ```
 
 Do not start `kiran-session-manager`, `kiran-panel` or the desktop with `sudo`. Mixing root sessions, WSLg's display and X410 is the main cause of duplicated panels and unpredictable startup.
+
+<p align="center">
+<a href="https://github.com/vinberg88">
+<img width="500" height="150" alt="openEuler" src="https://github.com/user-attachments/assets/b334c603-0688-4dfd-8cc2-ddad33dce160" />
+</p>
 
 ## License
 
