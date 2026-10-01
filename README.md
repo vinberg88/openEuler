@@ -17,10 +17,25 @@ The first tested desktop is **Kiran Desktop on openEuler 25.09 through X410**. T
 
 How to install GNOME deskop on openEuler 25.09
 
+<p align="center">
+<a href="https://github.com/vinberg88/openEuler/blob/main/OpenEuler25.09-GNOME.txt">
+<img width="1920" height="1080" alt="openEuler-Gnome-25 09" src="https://github.com/user-attachments/assets/b0ee6091-f0b8-46d1-a25a-12879e8e9f90" />
+</p>
 
-
-- [Install GNOME desktop via openEuler](OpenEuler25.09-KIRAN.txt)
+- [Install GNOME desktop via openEuler](OpenEuler25.09-GNOME.txt)
 - **YouTube video guide:** [How to install GNOME via openEuler](https://www.youtube.com/watch?v=2XqTazXq5JY)
+
+About Gnome desktop - https://www.gnome.org
+
+Every part of GNOME has been designed to make it simple
+and easy to use. The Activities Overview is a simple
+way to access all your basic tasks. A press of a button
+is all it takes to view your open windows, launch
+applications, or check if you have new messages. Having
+everything in one convenient place means you don’t have
+to learn your way around a maze of different technologies. 
+GNOME provides a focused working environment that helps
+you get things done.
 
 ---
 
