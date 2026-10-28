@@ -1,7 +1,7 @@
 OpenEuler 26.09 and Kiran Desktop - Install Kiran via openEuler 26.09 and windows 11 - WSL - LINUX -  YouTUBE - 2026
 
 How to install Kiran Desktop via openEuler 26.09 - WSL - TEXT via GITHUB
-Comming SONE...
+https://github.com/vinberg88/openEuler/blob/main/OpenEuler26.09-KIRAN.txt
 
 How to install Kiran Desktop via openEuler 26.09 - WSL - MOVIE via YOUTUBE
 Comming SONE...
