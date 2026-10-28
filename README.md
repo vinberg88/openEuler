@@ -20,7 +20,7 @@ How to install KIRAN - https://github.com/vinberg88/openEuler/blob/main/OpenEule
 
 Video VIA YouTUBE - Comming SONE..
 
-About openEuler 26.09 - [https://www.openeuler.org/en](https://docs.openeuler.org/en/docs/26.09/server/index.html)
+[About openEuler 26.09](https://docs.openeuler.org/en/docs/26.09/server/index.html)
 
 OpenEuler is an open source project incubated and
 operated by the OpenAtom Foundation. EulerOS is a
@@ -28,6 +28,7 @@ commercial Linux distribution developed by Huawei
 based on Red Hat Enterprise Linux.
 
 <img width="981" height="638" alt="kiran-2" src="https://github.com/user-attachments/assets/67478f2e-6a25-4f0d-838f-81e966513675" />
+
 
 [About KIRAN](https://docs.openeuler.org/en/docs/22.03_LTS_SP3/docs/desktop/Kiran_userguide.html)
 
