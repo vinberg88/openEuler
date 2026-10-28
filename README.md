@@ -20,7 +20,7 @@ How to install KIRAN - https://github.com/vinberg88/openEuler/blob/main/OpenEule
 
 Video VIA YouTUBE - Comming SONE..
 
-About openEuler 26.09 - https://www.openeuler.org/en
+About openEuler 26.09 - [https://www.openeuler.org/en](https://docs.openeuler.org/en/docs/26.09/server/index.html)
 
 OpenEuler is an open source project incubated and
 operated by the OpenAtom Foundation. EulerOS is a
