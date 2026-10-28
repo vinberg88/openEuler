@@ -14,7 +14,7 @@ The first tested desktop is **Kiran Desktop on openEuler 25.09 through X410**. T
 
 ---
 
-NEW - OpenEuler26.09 and Kiran desktop - 2026
+# NEW - OpenEuler26.09 and Kiran desktop - 2026
 
 
 
