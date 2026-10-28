@@ -18,7 +18,7 @@ The first tested desktop is **Kiran Desktop on openEuler 25.09 through X410**. T
 
 [How to install KIRAN](https://github.com/vinberg88/openEuler/blob/main/OpenEuler26.09-KIRAN.txt)
 
-Video VIA YouTUBE - Comming SONE..
+Video VIA YouTUBE - KIRAN - [WATCH NOW HOW TO INSTALL](https://www.youtube.com/watch?v=mdPZTSXXc4w)
 
 [About openEuler 26.09](https://docs.openeuler.org/en/docs/26.09/server/index.html)
 
