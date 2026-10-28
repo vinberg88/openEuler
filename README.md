@@ -27,7 +27,10 @@ operated by the OpenAtom Foundation. EulerOS is a
 commercial Linux distribution developed by Huawei
 based on Red Hat Enterprise Linux.
 
-<img width="981" height="638" alt="kiran-2" src="https://github.com/user-attachments/assets/67478f2e-6a25-4f0d-838f-81e966513675" />
+<p align="center">
+<a href="https://github.com/vinberg88/openEuler/releases">
+<img width="1920" height="1080" alt="OpenEuler26 09-KIRAN" src="https://github.com/user-attachments/assets/311b96d4-38cb-4cba-a791-2fcb960c767a" />
+</p>
 
 ---
 
