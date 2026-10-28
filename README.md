@@ -103,7 +103,7 @@ you get things done.
 
 ---
 
-# WSL - openEuler via Kiran Desktop - 2026
+# WSL - OpenEuler via Kiran Desktop - 25.09
 
 ![Kiran Desktop running on openEuler 25.09 in X410](images/OpenEuler25.09-KIRAN.png)
 
