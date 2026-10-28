@@ -29,6 +29,7 @@ based on Red Hat Enterprise Linux.
 
 <img width="981" height="638" alt="kiran-2" src="https://github.com/user-attachments/assets/67478f2e-6a25-4f0d-838f-81e966513675" />
 
+---
 
 [About KIRAN](https://docs.openeuler.org/en/docs/22.03_LTS_SP3/docs/desktop/Kiran_userguide.html)
 
