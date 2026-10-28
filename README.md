@@ -18,7 +18,14 @@ The first tested desktop is **Kiran Desktop on openEuler 25.09 through X410**. T
 
 How to install KIRAN - https://github.com/vinberg88/openEuler/blob/main/OpenEuler26.09-KIRAN.txt
 
-Video VIA YouTUBE - Comming SONE,,
+Video VIA YouTUBE - Comming SONE..
+
+About openEuler 26.09 - https://www.openeuler.org/en
+
+OpenEuler is an open source project incubated and
+operated by the OpenAtom Foundation. EulerOS is a
+commercial Linux distribution developed by Huawei
+based on Red Hat Enterprise Linux.
 
 <img width="981" height="638" alt="kiran-2" src="https://github.com/user-attachments/assets/67478f2e-6a25-4f0d-838f-81e966513675" />
 
