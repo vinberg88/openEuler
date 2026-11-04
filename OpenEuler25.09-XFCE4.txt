@@ -1,7 +1,7 @@
 OpenEuler 25.09 and XFCE4 - Install XFCE desktop via openEuler 25.09 and windows 11 - WSL - LINUX - YouTUBE - 2026
 
 How to install XFCE4 via openEuler 25.09 - WSL - TEXT via GITHUB
-Comming SONE
+https://github.com/vinberg88/openEuler/blob/main/OpenEuler25.09-XFCE4.txt
 
 How to install XFCE4 via openEuler 25.09 - WSL - MOVIE via YOUTUBE
 Comming SONE
