@@ -1,4 +1,4 @@
-# OpenEuler Desktop Collection FOR WSL - 2026
+# OpenEuler - Desktop test FOR WSL - 2026
 
 <p align="center">
 <a href="https://github.com/vinberg88">
