@@ -3,7 +3,7 @@ OpenEuler 23.09 and UKUI desktop - WSL - How to install UKUI via openEuler - win
 Download openEuler 23.09 here: https://github.com/vinberg88/openEuler/releases
 
 How to install UKUI Desktop via openEuler 23.09 - WSL - TEXT via GITHUB.
-WORKING ON THAT NOW...
+https://github.com/vinberg88/openEuler/blob/main/openEuler-23.09-UKUI.txt
 
 How to install UKUI Desktop via openEuler 23.09 - WSL - MOVIE VIA YouTUBE.
 WORKING ON THAT NOW...
