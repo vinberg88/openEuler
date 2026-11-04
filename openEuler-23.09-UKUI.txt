@@ -1,0 +1,422 @@
+OpenEuler 23.09 and UKUI desktop - WSL - How to install UKUI via openEuler - windows 11 - YouTUBE - GitHUB - 2026
+
+Download openEuler 23.09 here: https://github.com/vinberg88/openEuler/releases
+
+How to install UKUI Desktop via openEuler 23.09 - WSL - TEXT via GITHUB.
+WORKING ON THAT NOW...
+
+How to install UKUI Desktop via openEuler 23.09 - WSL - MOVIE VIA YouTUBE.
+WORKING ON THAT NOW...
+
+TOOLS THAT I USE FOR WSL and WINDOWS 11 - UKUI / Kylin Desktop - x410 - 2026
+
+X410 - Xserver for windows 11 - So you have a Desktop TO See in Windows 11.
+https://apps.microsoft.com/detail/9pm8lp83g3l3?hl=en-US&gl=US
+
+Raft WSL - Handel WSL image easy and Linux for WSL and Windows 11.
+https://apps.microsoft.com/detail/9msmjqd017x7?hl=en-US&gl=US
+
+WSL UI - This tool is free and works like Raft WSL.
+https://apps.microsoft.com/detail/9p8548knj2m9?hl=sv-SE&gl=SE
+
+                 `.cc.`                     
+             ``.cccccccc..`                 
+          `.cccccccccccccccc.`              MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
+      ``.cccccccccccccccccccccc.``          
+   `..cccccccccccccccccccccccccccc..`       UKUI DESKTOP FOR WSL AND WINDOWS 11 - 2026
+`.ccccccccccccccc/++/ccccccccccccccccc.`    
+.cccccccccccccccmNMMNdo+oso+ccccccccccc.    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
+.cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-23.09 (2.9.13.0)
+.ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 23.09 x86_64 - ROG Strix - UKUI desktop
+.cc/NMMMMMo////:c:///:cccccccccccccccccc    
+.cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
+.cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
+.cccccccccohhhs/comMMMMNhccccccccccccccc    Download openEuler here: https://github.com/vinberg88/openEuler/releases
+.ccccccccccccccc:MMMMMMMM/cccccccccccccc    
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: matttiasvinberg@duck.com
+`..cccccccccccccccc/+/:cccccccccccccc..`    
+   ``.cccccccccccccccccccccccccccc.``       More desktop for WSL: https://github.com/vinberg88
+       `.cccccccccccccccccccccc.`          
+          ``.cccccccccccccc.``              
+              `.cccccccc.`                             
+                 `....`
+
+About OpenEuler 23.09 - https://www.openeuler.org/en/ - 2026
+
+openEuler is an open-source operating system. The current
+openEuler kernel is based on Linux and supports server, cloud
+computing, edge computing, embedded, and other application
+scenarios. openEuler is committed to providing a secure, stable,
+and easy-to-use operating system. As an efficient, stable, 
+and secure open-source OS built by global open-source contributors,
+openEuler applies to database, big data, cloud computing, and 
+artificial intelligence (AI) scenarios. In addition, openEuler 
+community is an open-source community for global OSs. Through
+community cooperation, openEuler builds an innovative platform,
+builds a unified and open OS that supports multiple processor
+architectures, and promotes the prosperity of the software and 
+hardware application ecosystem.
+
+About UKUI - https://docs.openeuler.org/en/docs/24.03_LTS_SP3/tools/desktop/ukui/ukui_user_guide.html
+
+UKUI is a Linux desktop built by the KylinSoft software
+team over the years, primarily based on GTK and QT. 
+Compared with other UIs, UKUI is easy to use. The Components
+of UKUI are lightweight and can run independently without
+relying on other suites. It can provide user a friendly
+and efficient experience. UKUI supports both
+x86_64 and aarch64 architectures.
+
+Find More Stuff for WSL: https://github.com/vinberg88/openEuler
+
+Old Page for WSL: https://github.com/vinberg88/opensuse
+
+New page for WSL. Under DEV: https://github.com/vinberg88
+
+ABOUT WSL for WINDOWS via GITHUB - https://vinberg88.github.io
+
+Download openEuler 23.09: https://github.com/vinberg88/openEuler/releases
+
+WSL, which stands for Windows Subsystem for Linux, is a
+compatibility layer created by Microsoft that permits
+users to operate a Linux Environment directly on a
+Windows system without requiring a virtual machine or
+a dual-boot configuration.
+
+-----------------------------------
+
+Lets start install of openEuler and UKUI / KYLIN desktop.
+
+Download openEuler 25.09 here: https://github.com/vinberg88/openEuler/releases
+
+When doqnloaded press Blue Icon and you are ready to start =)
+
+-----------------------------------
+
+AFTER INSTALLATION - Change password for Root and User - UKUI will work better.
+
+Change adnolf to your username.
+
+sudo passwd root
+sudo passwd adolf
+
+-----------------------------------
+
+Install fast mirrors or repos for openEuler 25.09
+
+Run this first
+
+sudo sed -i -e 's|repo.openeuler.org/openEuler-25.09|mirrors.xtom.de/openeuler/openEuler-25.09|g' -e 's|^metalink=|#metalink=|g' /etc/yum.repos.d/openEuler.repo
+sudo sed -i 's/plugins=1/plugins=0/g' /etc/yum.conf
+sudo yum clean all && sudo yum makecache
+
+-----------------------------------
+
+Install faster mirrors or repos for openEuler 25.09
+
+sudo dnf install nano
+
+sudo nano /etc/dnf/dnf.conf
+
+Add the following line: max_parallel_downloads=10 and fastestmirror=True
+
+Like That in Console.
+
+max_parallel_downloads=10
+fastestmirror=True
+
+-----------------------------------
+
+Update All by paste this in Console - openEuler 23.09
+
+sudo dnf upgrade --refresh
+
+-----------------------------------
+
+Install full systemd for openEuler - so all works for UKUI / Kylin deskytop.
+
+sudo dnf install systemd-resolved systemd* -y
+
+-----------------------------------
+
+Reboot openEuler 23.09 - Reboot openEuler 23.09 - Reboot openEuler 23.09
+
+-----------------------------------
+
+Install SDDM for OpenEuler 23.09 and UKUI / KYLIN desktop - 2026
+
+Open this file: sudo nano /etc/yum.repos.d/openEuler-everything.repo
+
+Copy and past this to nano
+
+[copr:eur.openeuler.openatom.cn:yansheng1003:xrdp]
+name=Copr repo for xrdp owned by yansheng1003
+baseurl=https://eur.openeuler.openatom.cn/results/yansheng1003/xrdp/openeuler-24.09-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://eur.openeuler.openatom.cn/results/yansheng1003/xrdp/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+
+Last is to test that i works =) SDDM working well via UKUI / KYLIN =)
+
+sudo dnf makecache
+sudo dnf upgrade --refresh
+sudo dnf install sddm* --allowerasing --skip-broken --nobest -y
+sudo systemctl set-default graphical.target
+sudo systemctl enable sddm
+
+-----------------------------------
+
+Time to install UKUI Desktop via openEuler 23.09 - 2026
+
+sudo dnf install kylin* -y --allowerasing --skip-broken --nobest 
+sudo dnf install ukui* -y --allowerasing --skip-broken --nobest
+
+-----------------------------------
+
+                 `.cc.`                     
+             ``.cccccccc..`                 
+          `.cccccccccccccccc.`              MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
+      ``.cccccccccccccccccccccc.``          
+   `..cccccccccccccccccccccccccccc..`       UKUI DESKTOP FOR WSL AND WINDOWS 11 - 2026
+`.ccccccccccccccc/++/ccccccccccccccccc.`    
+.cccccccccccccccmNMMNdo+oso+ccccccccccc.    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
+.cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-23.09 (2.9.13.0)
+.ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 23.09 x86_64 - ROG Strix
+.cc/NMMMMMo////:c:///:cccccccccccccccccc    
+.cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
+.cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
+.cccccccccohhhs/comMMMMNhccccccccccccccc    Download openEuler here: https://github.com/vinberg88/openEuler/releases
+.ccccccccccccccc:MMMMMMMM/cccccccccccccc    
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: matttiasvinberg@duck.com
+`..cccccccccccccccc/+/:cccccccccccccc..`    
+   ``.cccccccccccccccccccccccccccc.``       More desktop for WSL: https://github.com/vinberg88
+       `.cccccccccccccccccccccc.`          
+          ``.cccccccccccccc.``              
+              `.cccccccc.`                             
+                 `....`
+
+-----------------------------------
+
+Install some Basic progrms for openEuler 23.09 - UKUI / KYLIN
+
+sudo dnf install yum wget dbus* git nano bash sudo curl npm kwin* xorg* x11* --allowerasing --skip-broken --nobest 
+
+-----------------------------------
+
+Install Google-Chrome - Paste all under this paragraph in terminal for UKUI / KYLIN desktop and openEuler 23.09
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+sudo yum install ./google-chrome-stable_current_*.rpm
+sudo yum update google-chrome-stable
+
+-----------------------------------
+
+Install Visual Studio Code - 2026 - Microsoft Engine for Code - OpenEuler 23.09
+
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+
+sudo dnf install code -y
+
+-----------------------------------
+
+Install NIXOS for BLANKET
+
+curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install | sh -s -- --no-daemon
+
+Change adolf to yout username for openEuler 23.09
+
+. /home/adolf/.nix-profile/etc/profile.d/nix.sh
+
+nix-env -iA nixpkgs.blanket
+
+-----------------------------------
+
+Install Blanket so we have sound when we work =)
+
+Copy and Paste in terminal: sudo dnf install flatpak* -y
+
+Copy and Paste in terminal: sudo dnf install gst* -y 
+
+Copy and Paste in terminal: sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+sudo flatpak install flathub com.rafaelmardojai.Blanket
+
+-----------------------------------
+
+Listen to sounds via Blanket when you are working - AlmaLinux 10 - 2026
+
+wget https://www.swehub.com/blanket/blanket-0.8.0-1.noarch.rpm
+sudo dnf install ./blanket-0.8.0-1.noarch.rpm -y
+
+-----------------------------------
+
+Install GIMP for openEuler and UKUI / KYLIN desktop.
+
+sudo dnf install gimp -y
+
+-----------------------------------
+
+Install LibreOffice via rpm package for openEuler 23.09
+
+wget https://mirror.accum.se/mirror/documentfoundation.org/libreoffice/stable/26.2.6/rpm/x86_64/LibreOffice_26.2.6_Linux_x86-64_rpm.tar.gz
+
+tar -xzvf LibreOffice_26.2.6_Linux_x86-64_rpm.tar.gz
+cd LibreOffice_26.2.6.3_Linux_x86-64_rpm
+cd RPMS
+sudo dnf install -y *.rpm
+cd
+
+-----------------------------------
+
+Install Fastfetch - Its a must - openEuler 23.09
+
+wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.54.0/fastfetch-linux-amd64.rpm
+sudo dnf install ./fastfetch-linux-amd64.rpm
+
+Test by typing fastfetch in terminal: fastfetch
+
+                 `.cc.`                     
+             ``.cccccccc..`                 
+          `.cccccccccccccccc.`              MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
+      ``.cccccccccccccccccccccc.``          
+   `..cccccccccccccccccccccccccccc..`       UKUI DESKTOP FOR WSL AND WINDOWS 11 - 2026
+`.ccccccccccccccc/++/ccccccccccccccccc.`    
+.cccccccccccccccmNMMNdo+oso+ccccccccccc.    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
+.cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-23.09 (2.9.13.0)
+.ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 23.09 x86_64 - ROG Strix - UKUI
+.cc/NMMMMMo////:c:///:cccccccccccccccccc    
+.cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
+.cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
+.cccccccccohhhs/comMMMMNhccccccccccccccc    Download openEuler here: https://github.com/vinberg88/openEuler/releases
+.ccccccccccccccc:MMMMMMMM/cccccccccccccc    
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: matttiasvinberg@duck.com
+`..cccccccccccccccc/+/:cccccccccccccc..`    
+   ``.cccccccccccccccccccccccccccc.``       More desktop for WSL: https://github.com/vinberg88
+       `.cccccccccccccccccccccc.`          
+          ``.cccccccccccccc.``              
+              `.cccccccc.`                             
+                 `....`
+
+
+More info about openEuler and UKUI desktop.
+
+Architecture: x86_64
+Built: 2026-06-25T17:27:16Z
+OS: Microsoft Azure Linux 3.0
+wslg:            6942bb534b537302a7a22617261d9274db3cfa37
+DirectX-Headers: v1.608.0
+FreeRDP:         c4030980b29322a9cb2190711a5fadeeeb8b6a33
+mesa:            23.1.0
+pulseaudio:      c33051f2296af748ac5cd13e51abfac4d129e4c7
+weston:          a7e35fdab455dce5774b43b8aff682f748307e31
+Wayland
+
+-----------------------------------
+
+sudo systemctl set-default graphical.target
+
+-----------------------------------
+
+Fix IP problem for X410. Cant find screen. Look for ip adress in windows terminal / PowerShell
+
+OPEN POWERSHELL AND PASTE THIS: ipconfig
+
+Last lines are IP-numbers for WSL in POWERSHELL so x410 works.
+
+SAVE IP FROM POWERSHELL HERE: 172.30.16.1
+
+NOW GO BACK TO openEuler 23.09 Terminal and paste this.
+
+sudo systemctl unmask systemd-resolved.service
+sudo systemctl enable systemd-resolved.service
+
+sudo ls -l /etc/resolv.conf
+sudo mv /etc/resolv.conf /tmp/resolv.conf.bak
+sudo nano /etc/resolv.conf
+
+nameserver 172.30.16.1  <-- put your ip here from powershell and add nameserver.
+
+sudo chattr +i /etc/resolv.conf
+sudo systemctl restart systemd-resolved
+sudo cat /etc/resolv.conf
+
+DONE - alot of problem fixed openEuler 23.09 and UKUI desktop =]
+
+-----------------------------------
+
+Make this small script for openEuler 23.09 and UKUI / KYLIN desktop.
+
+Type in terminal: sudo nano ~/.bash_ukui_desktop
+
+Paste this in terminal and save:
+
+export XDG_SESSION_TYPE=x11
+export XDG_SESSION_CLASS=user
+export GDK_BACKEND=x11
+
+export LIBGL_ALWAYS_SOFTWARE=1
+
+-----------------------------------
+
+OpenEuler 23.09 - Reboot Reboot Reboot Reboot Reboot Reboot - OpenEuler 23.09
+
+-----------------------------------
+
+We can now start UKUI / KYLIN desktop via openEuler 23.09 - READ have to start desktop - 2026
+
+
+NOTE - Start X410 for windows 11 and later start OpenEuler 23.09 via terminal for linux.
+
+
+Paste in terminal: export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+
+Paste in terminal: . ~/.bash_ukui_desktop
+
+Paste in terminal: ukui-session
+
+              " Just wait it will start - OpenEuler 23.09 and KYLIN - UKUI Desktop "
+
+-----------------------------------
+
+Download openEuler 23.09 here for WSL: https://github.com/vinberg88/openEuler/releases
+
+                 `.cc.`                     
+             ``.cccccccc..`                 
+          `.cccccccccccccccc.`              MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
+      ``.cccccccccccccccccccccc.``          
+   `..cccccccccccccccccccccccccccc..`       UKUI DESKTOP FOR WSL AND WINDOWS 11 - 2026
+`.ccccccccccccccc/++/ccccccccccccccccc.`    
+.cccccccccccccccmNMMNdo+oso+ccccccccccc.    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
+.cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-23.09 (2.9.13.0)
+.ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 23.09 x86_64 - ROG Strix
+.cc/NMMMMMo////:c:///:cccccccccccccccccc    
+.cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
+.cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
+.cccccccccohhhs/comMMMMNhccccccccccccccc    Download openEuler here: https://github.com/vinberg88/openEuler
+.ccccccccccccccc:MMMMMMMM/cccccccccccccc    
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: matttiasvinberg@duck.com
+`..cccccccccccccccc/+/:cccccccccccccc..`    
+   ``.cccccccccccccccccccccccccccc.``       More desktop for WSL: https://github.com/vinberg88
+       `.cccccccccccccccccccccc.`          
+          ``.cccccccccccccc.``              
+              `.cccccccc.`                             
+                 `....`
+
+❤ Thank you for being a part of openEuler 23.09 and Kylin / UKUI for WSL2 ❤
+
+Regards Mattias Vinberg - Sweden - openEuler - UKUI - KYLIN - x410 -  windows 11 - YouTUBE - GitHUB - 2026
+
+-----------------------------------
