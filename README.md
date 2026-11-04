@@ -14,7 +14,33 @@ The first tested desktop is **Kiran Desktop on openEuler 25.09 through X410**. T
 
 ---
 
-# NEW - OpenEuler 26.09 and Kiran desktop - 2026
+OpenEuler 23.09 and UKUI desktop For WSL - 2026
+
+Text Via GITHUB - [How to install UKUI desktop via OpenEuler 23.09](https://github.com/vinberg88/openEuler/blob/main/OpenEuler26.09-KIRAN.txt)
+
+Video via YouTUBE - Comming SONE [HOW TO INSTALL UKUI desktiop via OpenEuler 23.09](https://www.youtube.com/watch?v=mdPZTSXXc4w)
+
+[About OpenEuler for WSL and Windows 11](https://www.openeuler.org/en/)
+
+In addition, openEuler community is an open-source community for global OSs. Through community cooperation, openEuler
+builds an innovative platform, builds a unified and open OS that supports multiple processor architectures, and promotes
+the prosperity of the software and hardware application ecosystem.
+
+<p align="center">
+<a href="https://github.com/vinberg88/openEuler/releases">
+<img width="1920" height="1080" alt="OpenEuler26 09-KIRAN" src="https://github.com/user-attachments/assets/311b96d4-38cb-4cba-a791-2fcb960c767a" />
+</p>
+
+[About UKUI for OpenEuler](https://docs.openeuler.org/en/docs/24.03_LTS_SP3/tools/desktop/ukui/ukui_user_guide.html)
+
+UKUI is a Linux desktop built by the KylinSoft software team over the years, primarily based on GTK and QT. 
+Compared with other UIs, UKUI is easy to use. The Components of UKUI are lightweight and can run independently without
+relying on other suites. It can provide user a friendly and efficient experience. UKUI supports both
+x86_64 and aarch64 architectures.
+
+---
+
+# OpenEuler 26.09 and Kiran desktop - 2026
 
 Text Via GITHUB - [How to install KIRAN](https://github.com/vinberg88/openEuler/blob/main/OpenEuler26.09-KIRAN.txt)
 
@@ -22,10 +48,8 @@ Video VIA YouTUBE - KIRAN - [WATCH NOW HOW TO INSTALL](https://www.youtube.com/w
 
 [About openEuler 26.09](https://docs.openeuler.org/en/docs/26.09/server/index.html)
 
-OpenEuler is an open source project incubated and
-operated by the OpenAtom Foundation. EulerOS is a
-commercial Linux distribution developed by Huawei
-based on Red Hat Enterprise Linux.
+OpenEuler is an open source project incubated andoperated by the OpenAtom Foundation. EulerOS is a
+commercial Linux distribution developed by Huawei based on Red Hat Enterprise Linux.
 
 <p align="center">
 <a href="https://github.com/vinberg88/openEuler/releases">
