@@ -302,6 +302,18 @@ Do not start `kiran-session-manager`, `kiran-panel` or the desktop with `sudo`. 
 <img width="500" height="150" alt="openEuler" src="https://github.com/user-attachments/assets/b334c603-0688-4dfd-8cc2-ddad33dce160" />
 </p>
 
-## License
+--
 
-The launcher, installer and repository documentation are available under the [MIT License](LICENSE). Third-party projects and packages retain their own licenses.
+## OpenEuler for WSL and Desktops - 2026
+
+<p align="center">
+openEuler is a Linux distribution with a focus on the enterprise segment along with servers, cloud and edge. Originally developed by Huawei,
+it is now developed and governed by the Open Atom Foundation. It is the first open source software foundation in China and is backed
+by big names like Huawei, Alibaba, Tencent, Baidu etc. China's Ministry of IT is also part of the foundation.
+</p>
+
+<p align="center">
+This project runs via Mattias Vinberg - Stockholm - Sweden 2026 - Find More WSL stuff here - https://github.com/vinberg88
+</p>
+
+
