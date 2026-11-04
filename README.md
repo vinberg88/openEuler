@@ -20,7 +20,6 @@ OpenEuler works perfect and it fun to use for diffrent desktops via WSL.
 
 ---
 
-
 ![openEuler](https://img.shields.io/badge/openEuler-WSL-0A7B83?style=for-the-badge&logo=linux&logoColor=white)
 ![Windows 11](https://img.shields.io/badge/Windows_11-WSL_2-0078D4?style=for-the-badge&logo=windows11&logoColor=white)
 ![Kiran](https://img.shields.io/badge/Kiran-X410_tested-2EA3F2?style=for-the-badge)
@@ -35,11 +34,34 @@ The first tested desktop is **Kiran Desktop on openEuler 25.09 through X410**. T
 
 ---
 
+# OpenEuler 25.09 and XFCE4 For WSL - 2026
+
+Comming SONE working on this NOW...
+
+Have to install all - Video via YouTUBE - TEXT via GitHUB
+
+Text Via GITHUB - [How to install XFCE4 desktop via OpenEuler 25.09](https://github.com/vinberg88)
+
+Video via YouTUBE - Comming SONE [HOW TO INSTALL XFCE4 desktop via OpenEuler 25.09](https://www.youtube.com/watch?v=mdPZTSXXc4w)
+
+<p align="center">
+<a href="https://github.com/vinberg88">
+<img width="1920" height="1080" alt="OpenEuler25.09 XFCE4" src="https://github.com/user-attachments/assets/a2e342df-8eac-43b8-991f-231da7ab72ab" />
+</p>
+
+About xfce4 for Linux - 2026 - https://www.xfce.org
+
+Xfce or XFCE4 (pronounced as four individual letters) is a free and open-source desktop environment for Linux and
+other Unix-like operating systems. Linux, FreeBSD, NetBSD, OpenBSD and GNU/Hurd. Xfce aims to be fast and lightweight
+while still being visually appealing and easy to use.
+
+---
+
 # OpenEuler 23.09 and UKUI desktop For WSL - 2026
 
 Text Via GITHUB - [How to install UKUI desktop via OpenEuler 23.09](https://github.com/vinberg88/openEuler/blob/main/openEuler-23.09-UKUI.txt)
 
-Video via YouTUBE - Comming SONE [HOW TO INSTALL UKUI desktiop via OpenEuler 23.09](https://www.youtube.com/watch?v=mdPZTSXXc4w)
+Video via YouTUBE - Comming SONE [HOW TO INSTALL UKUI desktop via OpenEuler 23.09](https://www.youtube.com/watch?v=mdPZTSXXc4w)
 
 [About OpenEuler for WSL and Windows 11](https://www.openeuler.org/en/)
 
