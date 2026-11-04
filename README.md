@@ -45,7 +45,7 @@ Text Via GITHUB - [How to install XFCE4 desktop via OpenEuler 25.09](OpenEuler25
 Video via YouTUBE - Comming SONE [HOW TO INSTALL XFCE4 desktop via OpenEuler 25.09](https://www.youtube.com/watch?v=mdPZTSXXc4w)
 
 <p align="center">
-<a href="https://github.com/vinberg88">
+<a href="https://github.com/vinberg88/openEuler/blob/main/OpenEuler25.09-XFCE4.txt">
 <img width="1920" height="1080" alt="OpenEuler25.09 XFCE4" src="https://github.com/user-attachments/assets/a2e342df-8eac-43b8-991f-231da7ab72ab" />
 </p>
 
