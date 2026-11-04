@@ -1,4 +1,11 @@
-# WSL - openEuler Desktop Collection.
+# OpenEuler Desktop Collection FOR WSL - 2026
+
+<p align="center">
+<a href="https://github.com/vinberg88">
+<img width="710" height="334" alt="OpenEuler" src="https://github.com/user-attachments/assets/f42d736c-d10f-4ee7-b054-266de5e7dda7" />
+</p>
+
+---
 
 ![openEuler](https://img.shields.io/badge/openEuler-WSL-0A7B83?style=for-the-badge&logo=linux&logoColor=white)
 ![Windows 11](https://img.shields.io/badge/Windows_11-WSL_2-0078D4?style=for-the-badge&logo=windows11&logoColor=white)
