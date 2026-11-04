@@ -88,7 +88,7 @@ infrastructure, government, and enterprise environments.
 
 ---
 
-# KDE 5 and openEuler - WSL - 2026
+# KDE 5 and openEuler 25.09 - WSL - 2026
 
 Working on that right now.. Comming project for openEuler  25.09 
 
