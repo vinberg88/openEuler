@@ -7,7 +7,7 @@
 
 ---
 
-# About OpenEuler OS for WSL - OpenEuler works and it fun to USE!
+# About OpenEuler OS for WSL - OpenEuler is fun to USE!
 
 <p align="center">
 OpenAtom openEuler (openEuler for short) is an open source project incubated and operated by the OpenAtom Foundation. openEuler is an open source OS oriented to
@@ -40,7 +40,7 @@ Comming SONE working on this NOW...
 
 Have to install all - Video via YouTUBE - TEXT via GitHUB
 
-Text Via GITHUB - [How to install XFCE4 desktop via OpenEuler 25.09](https://github.com/vinberg88)
+Text Via GITHUB - [How to install XFCE4 desktop via OpenEuler 25.09](OpenEuler25.09-XFCE4.txt)
 
 Video via YouTUBE - Comming SONE [HOW TO INSTALL XFCE4 desktop via OpenEuler 25.09](https://www.youtube.com/watch?v=mdPZTSXXc4w)
 
