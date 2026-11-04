@@ -304,7 +304,7 @@ Do not start `kiran-session-manager`, `kiran-panel` or the desktop with `sudo`. 
 
 ---
 
-## OpenEuler for WSL and Desktops - 2026
+## OpenEuler for WSL and Desktops - 2026 - Have fun and play - OpenEuler
 
 <p align="center">
 openEuler is a Linux distribution with a focus on the enterprise segment along with servers, cloud and edge. Originally developed by Huawei,
