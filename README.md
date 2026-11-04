@@ -302,7 +302,7 @@ Do not start `kiran-session-manager`, `kiran-panel` or the desktop with `sudo`. 
 <img width="500" height="150" alt="openEuler" src="https://github.com/user-attachments/assets/b334c603-0688-4dfd-8cc2-ddad33dce160" />
 </p>
 
---
+---
 
 ## OpenEuler for WSL and Desktops - 2026
 
