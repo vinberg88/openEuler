@@ -10,7 +10,7 @@ A community collection for running complete openEuler desktop environments in WS
 
 The first tested desktop is **Kiran Desktop on openEuler 25.09 through X410**. The repository is structured so UKUI, GNOME, KDE Plasma, XFCE, Deepin and other desktops can be added without mixing their launchers, settings or diagnostics.
 
-> This is a personal/community project. It is not an official openEuler, KylinSec, Microsoft or X410 project.
+> This is a Community project. Official openEuler, KylinSec, Microsoft or X410 project.
 
 ---
 
@@ -27,8 +27,8 @@ builds an innovative platform, builds a unified and open OS that supports multip
 the prosperity of the software and hardware application ecosystem.
 
 <p align="center">
-<a href="https://github.com/vinberg88/openEuler/releases">
-<img width="1920" height="1080" alt="OpenEuler26 09-KIRAN" src="https://github.com/user-attachments/assets/311b96d4-38cb-4cba-a791-2fcb960c767a" />
+<a href="https://github.com/vinberg88">
+<img width="1920" height="1080" alt="openEuler-23 09-UKUI" src="https://github.com/user-attachments/assets/a50df729-b50c-44f8-a5b9-ecbfe0683969" />
 </p>
 
 [About UKUI for OpenEuler](https://docs.openeuler.org/en/docs/24.03_LTS_SP3/tools/desktop/ukui/ukui_user_guide.html)
