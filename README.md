@@ -180,7 +180,14 @@ kiran-x410 status
 kiran-x410 doctor
 kiran-x410 log
 ```
+---
 
+<p align="center">
+<a href="https://github.com/vinberg88">
+<img width="726" height="190" alt="OpenEuler2" src="https://github.com/user-attachments/assets/0f98f855-9df2-4771-8c63-94434e17d3be" />
+</p>
+
+---
 ## Normal start
 
 1. Double-click **Kiran Desktop (X410)** on the Windows desktop.
