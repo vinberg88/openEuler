@@ -77,7 +77,7 @@ Plasma is a Desktop for next life =)
 
 ---
 
-# WSL - OpenEuler via GNOME Desktop - 2026
+# WSL - OpenEuler 25.09 via GNOME Desktop
 
 How to install GNOME deskop on openEuler 25.09
 
