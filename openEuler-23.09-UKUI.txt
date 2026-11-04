@@ -27,7 +27,7 @@ https://apps.microsoft.com/detail/9p8548knj2m9?hl=sv-SE&gl=SE
 `.ccccccccccccccc/++/ccccccccccccccccc.`    
 .cccccccccccccccmNMMNdo+oso+ccccccccccc.    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
 .cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
-.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-23.09 (2.9.13.0)
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-23.09 (3.0.4.0)
 .ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
 .ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 23.09 x86_64 - ROG Strix - UKUI desktop
 .cc/NMMMMMo////:c:///:cccccccccccccccccc    
@@ -35,7 +35,7 @@ https://apps.microsoft.com/detail/9p8548knj2m9?hl=sv-SE&gl=SE
 .cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
 .cccccccccohhhs/comMMMMNhccccccccccccccc    Download openEuler here: https://github.com/vinberg88/openEuler/releases
 .ccccccccccccccc:MMMMMMMM/cccccccccccccc    
-.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: matttiasvinberg@duck.com
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: vinberg@duck.com
 `..cccccccccccccccc/+/:cccccccccccccc..`    
    ``.cccccccccccccccccccccccccccc.``       More desktop for WSL: https://github.com/vinberg88
        `.cccccccccccccccccccccc.`          
@@ -101,6 +101,32 @@ Change adnolf to your username.
 
 sudo passwd root
 sudo passwd adolf
+
+-----------------------------------
+
+                 `.cc.`                     
+             ``.cccccccc..`                 
+          `.cccccccccccccccc.`              MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
+      ``.cccccccccccccccccccccc.``          
+   `..cccccccccccccccccccccccccccc..`       UKUI DESKTOP FOR WSL AND WINDOWS 11 - 2026
+`.ccccccccccccccc/++/ccccccccccccccccc.`    
+.cccccccccccccccmNMMNdo+oso+ccccccccccc.    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
+.cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-23.09 (3.0.4.0)
+.ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 23.09 x86_64 - ROG Strix - UKUI desktop
+.cc/NMMMMMo////:c:///:cccccccccccccccccc    
+.cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
+.cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
+.cccccccccohhhs/comMMMMNhccccccccccccccc    Download openEuler here: https://github.com/vinberg88/openEuler/releases
+.ccccccccccccccc:MMMMMMMM/cccccccccccccc    
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: vinberg@duck.com
+`..cccccccccccccccc/+/:cccccccccccccc..`    
+   ``.cccccccccccccccccccccccccccc.``       More desktop for WSL: https://github.com/vinberg88
+       `.cccccccccccccccccccccc.`          
+          ``.cccccccccccccc.``              
+              `.cccccccc.`                             
+                 `....`
 
 -----------------------------------
 
@@ -179,7 +205,7 @@ sudo dnf install ukui* -y --allowerasing --skip-broken --nobest
 
 -----------------------------------
 
-                 `.cc.`                     
+`.cc.`                     
              ``.cccccccc..`                 
           `.cccccccccccccccc.`              MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
       ``.cccccccccccccccccccccc.``          
@@ -187,15 +213,15 @@ sudo dnf install ukui* -y --allowerasing --skip-broken --nobest
 `.ccccccccccccccc/++/ccccccccccccccccc.`    
 .cccccccccccccccmNMMNdo+oso+ccccccccccc.    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
 .cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
-.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-23.09 (2.9.13.0)
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-23.09 (3.0.4.0)
 .ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
-.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 23.09 x86_64 - ROG Strix
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 23.09 x86_64 - ROG Strix - UKUI desktop
 .cc/NMMMMMo////:c:///:cccccccccccccccccc    
 .cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
 .cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
 .cccccccccohhhs/comMMMMNhccccccccccccccc    Download openEuler here: https://github.com/vinberg88/openEuler/releases
 .ccccccccccccccc:MMMMMMMM/cccccccccccccc    
-.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: matttiasvinberg@duck.com
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: vinberg@duck.com
 `..cccccccccccccccc/+/:cccccccccccccc..`    
    ``.cccccccccccccccccccccccccccc.``       More desktop for WSL: https://github.com/vinberg88
        `.cccccccccccccccccccccc.`          
@@ -292,15 +318,15 @@ Test by typing fastfetch in terminal: fastfetch
 `.ccccccccccccccc/++/ccccccccccccccccc.`    
 .cccccccccccccccmNMMNdo+oso+ccccccccccc.    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
 .cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
-.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-23.09 (2.9.13.0)
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-23.09 (3.0.4.0)
 .ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
-.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 23.09 x86_64 - ROG Strix - UKUI
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 23.09 x86_64 - ROG Strix - UKUI desktop
 .cc/NMMMMMo////:c:///:cccccccccccccccccc    
 .cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
 .cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
 .cccccccccohhhs/comMMMMNhccccccccccccccc    Download openEuler here: https://github.com/vinberg88/openEuler/releases
 .ccccccccccccccc:MMMMMMMM/cccccccccccccc    
-.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: matttiasvinberg@duck.com
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: vinberg@duck.com
 `..cccccccccccccccc/+/:cccccccccccccc..`    
    ``.cccccccccccccccccccccccccccc.``       More desktop for WSL: https://github.com/vinberg88
        `.cccccccccccccccccccccc.`          
@@ -308,21 +334,9 @@ Test by typing fastfetch in terminal: fastfetch
               `.cccccccc.`                             
                  `....`
 
-
-More info about openEuler and UKUI desktop.
-
-Architecture: x86_64
-Built: 2026-06-25T17:27:16Z
-OS: Microsoft Azure Linux 3.0
-wslg:            6942bb534b537302a7a22617261d9274db3cfa37
-DirectX-Headers: v1.608.0
-FreeRDP:         c4030980b29322a9cb2190711a5fadeeeb8b6a33
-mesa:            23.1.0
-pulseaudio:      c33051f2296af748ac5cd13e51abfac4d129e4c7
-weston:          a7e35fdab455dce5774b43b8aff682f748307e31
-Wayland
-
 -----------------------------------
+
+Copy and paste thie to terminal - OpenEuler
 
 sudo systemctl set-default graphical.target
 
@@ -391,6 +405,8 @@ Paste in terminal: ukui-session
 
 Download openEuler 23.09 here for WSL: https://github.com/vinberg88/openEuler/releases
 
+More desktop for WSL and Windows 11: https://github.com/vinberg88
+
                  `.cc.`                     
              ``.cccccccc..`                 
           `.cccccccccccccccc.`              MEDIA MATTIAS VINBERG - SWEDEN - STOCKHOLM - 2026
@@ -399,15 +415,15 @@ Download openEuler 23.09 here for WSL: https://github.com/vinberg88/openEuler/re
 `.ccccccccccccccc/++/ccccccccccccccccc.`    
 .cccccccccccccccmNMMNdo+oso+ccccccccccc.    Kernel: Linux 6.18.40.1-microsoft-standard-WSL2
 .cccccccccc/++odms+//+mMMMMm/:+syso/cccc    
-.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-23.09 (2.9.13.0)
+.cccccccccyNNMMMs:::/::+o+/:cdMMMMMmcccc    Host: Windows Subsystem for Linux - openEuler-23.09 (3.0.4.0)
 .ccccccc:+NmdyyhNNmNNNd:ccccc:oyyyo:cccc   
-.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 23.09 x86_64 - ROG Strix
+.ccc:ohdmMs:cccc+mNMNmyccccccccccccccccc    OS: openEuler 23.09 x86_64 - ROG Strix - UKUI desktop
 .cc/NMMMMMo////:c:///:cccccccccccccccccc    
 .cc:syysyNMNNNMNyccccccccccccccccccccccc    OS: Windows 11 Pro for Workstations (26H2) x86_64
 .cccccccc+MMMMMNyc:/+++/cccccccccccccccc    
-.cccccccccohhhs/comMMMMNhccccccccccccccc    Download openEuler here: https://github.com/vinberg88/openEuler
+.cccccccccohhhs/comMMMMNhccccccccccccccc    Download openEuler here: https://github.com/vinberg88/openEuler/releases
 .ccccccccccccccc:MMMMMMMM/cccccccccccccc    
-.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: matttiasvinberg@duck.com
+.ccccccccccccccccsNNNNNd+cccccccccccccc.    Mail: vinberg@duck.com
 `..cccccccccccccccc/+/:cccccccccccccc..`    
    ``.cccccccccccccccccccccccccccc.``       More desktop for WSL: https://github.com/vinberg88
        `.cccccccccccccccccccccc.`          
@@ -415,7 +431,7 @@ Download openEuler 23.09 here for WSL: https://github.com/vinberg88/openEuler/re
               `.cccccccc.`                             
                  `....`
 
-❤ Thank you for being a part of openEuler 23.09 and Kylin / UKUI for WSL2 ❤
+❤ Thank you for being a part of openEuler 23.09 and UKUI for WSL2 ❤
 
 Regards Mattias Vinberg - Sweden - openEuler - UKUI - KYLIN - x410 -  windows 11 - YouTUBE - GitHUB - 2026
 
