@@ -7,7 +7,7 @@
 
 ---
 
-# About OpenEuler OS for WSL - OpenEuler works perfect and it fun to USE!
+# About OpenEuler OS for WSL - OpenEuler works and it fun to USE!
 
 <p align="center">
 OpenAtom openEuler (openEuler for short) is an open source project incubated and operated by the OpenAtom Foundation. openEuler is an open source OS oriented to
