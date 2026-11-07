@@ -46,6 +46,7 @@ PowerShell. It verifies the official openEuler 26.09 container image against a
 pinned SHA-256 digest, imports it into a temporary WSL distribution, installs
 DDE and the launcher, clears runtime state, then exports the `.wsl` file and
 its checksum under `desktops/deepin/dist/`.
+The archive uses WSL's `tar.xz` export format to keep the download smaller.
 
 ## Diagnostics
 

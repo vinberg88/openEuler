@@ -137,7 +137,7 @@ foreach ($releaseKey in $selected) {
         }
 
         Write-Host "Exporting $([IO.Path]::GetFileName($outputPath))..."
-        Invoke-Wsl -Arguments @('--export', $tempDistro, $outputPath, '--format', 'tar.gz') -Operation 'WSL export'
+        Invoke-Wsl -Arguments @('--export', $tempDistro, $outputPath, '--format', 'tar.xz') -Operation 'WSL export'
     }
     finally {
         & wsl.exe --unregister $tempDistro 2>$null | Out-Null

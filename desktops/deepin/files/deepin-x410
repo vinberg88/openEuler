@@ -3,20 +3,26 @@ set -Eeuo pipefail
 
 unit=deepin-x410.service
 
-host_ip() {
-    # In the default WSL NAT mode this is the Windows host address. The
-    # resolver address is a fallback for older WSL network configurations.
-    local ip
-    ip="$(ip -4 route show default | awk 'NR == 1 {print $3; exit}')"
-    if [[ -z $ip ]]; then
-        ip="$(awk '$1 == "nameserver" && $2 ~ /^[0-9.]+$/ {print $2; exit}' /etc/resolv.conf)"
-    fi
-    [[ -n $ip ]] || { echo 'Cannot find the Windows host IP.' >&2; return 1; }
-    printf '%s\n' "$ip"
-}
-
-display_value() { printf '%s:0.0\n' "$(host_ip)"; }
 x_ready() { timeout 3 xdpyinfo -display "$1" >/dev/null 2>&1; }
+
+display_value() {
+    local host display
+    # NAT, DNS-tunnel and mirrored WSL networking expose the Windows X server
+    # at different addresses. Select the first one that actually responds.
+    for host in \
+        "$(ip -4 route show default | awk 'NR == 1 {print $3; exit}')" \
+        "$(awk '$1 == "nameserver" && $2 ~ /^[0-9.]+$/ {print $2; exit}' /etc/resolv.conf)" \
+        127.0.0.1; do
+        [[ -n $host ]] || continue
+        display="$host:0.0"
+        if x_ready "$display"; then
+            printf '%s\n' "$display"
+            return 0
+        fi
+    done
+    echo 'X410 is not reachable. Start X410 in Desktop mode and check its Windows firewall rule.' >&2
+    return 1
+}
 
 write_environment() {
     local path="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/deepin-x410.env"
@@ -40,10 +46,6 @@ write_environment() {
 start_session() {
     local display
     display="$(display_value)"
-    if ! x_ready "$display"; then
-        echo "X410 is not reachable on $display. Start X410 in Desktop mode first." >&2
-        return 1
-    fi
     write_environment
     systemctl --user daemon-reload
     systemctl --user restart "$unit"
@@ -76,11 +78,11 @@ case "${1:-start}" in
     status) systemctl --user status "$unit" --no-pager || true ;;
     doctor)
         printf 'Linux: %s\n' "$(. /etc/os-release; printf '%s' "$PRETTY_NAME")"
-        printf 'Windows host: %s\n' "$(host_ip)"
         for cmd in startdde kwin_x11 xdpyinfo systemctl; do
-            command -v "$cmd" || return 1
+            command -v "$cmd" || exit 1
         done
-        x_ready "$(display_value)" && echo 'X410 connection: OK' || { echo 'X410 connection: failed'; return 1; }
+        display="$(display_value)" || exit 1
+        printf 'X410 connection: OK (%s)\n' "$display"
         ;;
     log) journalctl --user -u "$unit" -n "${2:-100}" --no-pager ;;
     *) echo 'Usage: deepin-x410 {start|stop|restart|status|doctor|log [lines]|run}' >&2; exit 2 ;;
