@@ -177,7 +177,8 @@ you get things done.
 
 ## Installation walkthrough and video
 
-- [Complete Kiran installation walkthrough](OpenEuler25.09-KIRAN.txt)
+- GitHUB Text Guide: [Complete Kiran installation walkthrough](OpenEuler25.09-KIRAN.txt)
+
 - **YouTube video guide:** [How to install KIRAN via openEuler](https://www.youtube.com/watch?v=2XqTazXq5JY)
 
 The supported quick installer below is the shortest route. The longer walkthrough also covers the openEuler setup, optional desktop applications and the final X410 startup steps.
