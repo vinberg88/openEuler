@@ -35,9 +35,10 @@ mode when necessary and then launches DDE in the selected WSL distribution.
 
 ## Ready-made WSL package
 
-The `openEuler-26.09-Deepin-x86_64.wsl` package contains a clean openEuler
-26.09 base plus DDE and the launcher. Import it with `wsl --install --from-file`
-when the release artifact is available. Create a Linux user at first launch,
+The [release candidate](https://github.com/vinberg88/openEuler/releases/tag/deepin-26.09-rc1)
+contains `openEuler-26.09-Deepin-x86_64.wsl`, a clean openEuler 26.09 base
+plus DDE and the launcher. Import it with `wsl --install --from-file`.
+Create a Linux user at first launch,
 then run `bash desktops/deepin/install.sh` from this repository to add your
 Windows shortcut. The package contains no personal account or user files.
 

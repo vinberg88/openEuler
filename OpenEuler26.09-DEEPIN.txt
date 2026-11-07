@@ -11,6 +11,25 @@ Requirements
 - A normal Linux user with sudo rights; do not run the desktop as root.
 - Internet access to the official openEuler software repositories.
 
+Ready-made WSL package (release candidate)
+-----------------------------------------
+Download openEuler-26.09-Deepin-x86_64.wsl and its .sha256 file from:
+https://github.com/vinberg88/openEuler/releases/tag/deepin-26.09-rc1
+
+In Windows PowerShell, from the download directory, check the file and install:
+
+(Get-FileHash .\openEuler-26.09-Deepin-x86_64.wsl -Algorithm SHA256).Hash
+wsl --install --from-file .\openEuler-26.09-Deepin-x86_64.wsl
+
+Compare the displayed hash with the first value in the .sha256 file. At first
+launch, create your own Linux username and password. The package has no
+preconfigured personal account. X410 is installed separately on Windows.
+To create the Windows desktop shortcut, follow "Optional: one-click Windows
+shortcut" below after the first launch.
+
+If you prefer to install DDE into an existing openEuler 26.09 WSL instance,
+start at step 1 below.
+
 1. In Windows, start X410 in Desktop mode.
 
 2. Open the openEuler terminal and install Deepin and the X11 test utility:
