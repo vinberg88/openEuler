@@ -17,7 +17,7 @@ This repository reports only what has been visibly tested. Package installation 
 | 3 | GNOME | TBD | 🧪 Planned | WSLg and nested/full-desktop paths must be evaluated separately |
 | 4 | KDE Plasma | TBD | 🧪 Planned | Start with individual WSLg applications, then a separate X410 session |
 | 5 | XFCE | TBD | 🧪 Planned | Good lightweight X11 candidate |
-| 6 | Deepin Desktop | TBD | 🧪 Planned | Version compatibility must be recorded explicitly |
+| 6 | Deepin Desktop | 26.09 | 🚧 In progress | X410 launcher and KWin startup prepared; clean visual test pending |
 | 7 | Cinnamon | TBD | 🧪 Planned | Requires window-manager and acceleration checks |
 | 8 | MATE | TBD | 🧪 Planned | Shares several components with Kiran |
 | 9 | LXQt | TBD | 🧪 Planned | Lightweight Qt/X11 candidate |
