@@ -6,10 +6,18 @@ unit=deepin-x410.service
 x_ready() { timeout 3 xdpyinfo -display "$1" >/dev/null 2>&1; }
 
 display_value() {
-    local host display
+    local host display windows_ip
     # NAT, DNS-tunnel and mirrored WSL networking expose the Windows X server
-    # at different addresses. Select the first one that actually responds.
+    # at different addresses. The DNS-tunnel address is not necessarily the
+    # Windows host, so ask Windows for its WSL virtual adapter first.
+    windows_ip=''
+    if command -v powershell.exe >/dev/null 2>&1; then
+        windows_ip="$(timeout 10 powershell.exe -NoProfile -NonInteractive -Command \
+            'Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.InterfaceAlias -like "vEthernet (WSL*" } | Select-Object -ExpandProperty IPAddress' \
+            2>/dev/null | tr -d '\r' | head -n 1)" || true
+    fi
     for host in \
+        "$windows_ip" \
         "$(ip -4 route show default | awk 'NR == 1 {print $3; exit}')" \
         "$(awk '$1 == "nameserver" && $2 ~ /^[0-9.]+$/ {print $2; exit}' /etc/resolv.conf)" \
         127.0.0.1; do
