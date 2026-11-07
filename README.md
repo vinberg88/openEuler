@@ -33,6 +33,8 @@ A community collection for running complete openEuler desktop environments in WS
 The [Deepin/X410 setup](desktops/deepin/README.md) installs the complete DDE
 desktop, starts its KWin window manager and creates a Windows desktop shortcut.
 It is currently a release candidate awaiting a clean visual test on 26.09.
+For a command-by-command setup without the launcher, use the
+[plain text Deepin guide](OpenEuler26.09-DEEPIN.txt).
 
 The first tested desktop is **Kiran Desktop on openEuler 25.09 through X410**. The repository is structured so UKUI, GNOME, KDE Plasma, XFCE, Deepin and other desktops can be added without mixing their launchers, settings or diagnostics.
 

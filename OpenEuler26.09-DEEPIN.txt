@@ -1,0 +1,100 @@
+openEuler 26.09 + Deepin Desktop on Windows 11 / WSL 2 / X410
+============================================================
+
+This is the complete text-only route. No project launcher is required.
+It uses Deepin's KWin window manager so windows have borders and can be moved.
+
+Requirements
+------------
+- Windows 11 with WSL 2 and an openEuler 26.09 WSL distribution (x86-64).
+- X410 installed on Windows and started in Desktop mode.
+- A normal Linux user with sudo rights; do not run the desktop as root.
+- Internet access to the official openEuler software repositories.
+
+1. In Windows, start X410 in Desktop mode.
+
+2. Open the openEuler terminal and install Deepin and the X11 test utility:
+
+sudo dnf install -y dde xdpyinfo
+
+The DDE package is large and installation may take some time.
+
+3. Enable native WSL systemd if PID 1 is not already systemd:
+
+ps -p 1 -o comm=
+
+If this does not print systemd, add this section to /etc/wsl.conf:
+
+[boot]
+systemd=true
+
+Then run "wsl --shutdown" in Windows PowerShell and reopen openEuler.
+Do not install a separate PID-namespace systemd workaround.
+
+4. In the openEuler terminal, set the X11 environment. The loop tries the
+Windows host address used by normal WSL networking, its DNS fallback,
+and localhost (useful with mirrored networking):
+
+unset DISPLAY WAYLAND_DISPLAY
+for host in "$(ip -4 route show default | awk 'NR==1 {print $3; exit}')" \
+            "$(awk '$1=="nameserver" && $2 ~ /^[0-9.]+$/ {print $2; exit}' /etc/resolv.conf)" \
+            127.0.0.1; do
+    [ -n "$host" ] || continue
+    if DISPLAY="$host:0.0" timeout 3 xdpyinfo >/dev/null 2>&1; then
+        export DISPLAY="$host:0.0"
+        break
+    fi
+done
+xdpyinfo -display "${DISPLAY:?X410 not found}" >/dev/null || exit 1
+export XDG_SESSION_TYPE=x11 XDG_SESSION_CLASS=user
+export XDG_CURRENT_DESKTOP=Deepin XDG_SESSION_DESKTOP=deepin
+export DESKTOP_SESSION=deepin GDK_BACKEND=x11 QT_QPA_PLATFORM=xcb
+export LIBGL_ALWAYS_SOFTWARE=1
+
+If X410 is not found, verify Desktop mode and the Windows private-network
+firewall rule for X410.
+
+5. Make KWin start automatically whenever Deepin starts:
+
+mkdir -p ~/.config/autostart
+cat > ~/.config/autostart/kwin-x11.desktop <<'EOF'
+[Desktop Entry]
+Type=Application
+Name=KWin X11 Window Manager
+Exec=kwin_x11 --replace
+Terminal=false
+EOF
+
+The closing EOF must be on a line by itself when pasted into a terminal.
+
+6. Start the desktop in the same terminal:
+
+startdde
+
+Keep that terminal open while using the desktop. If windows appear without
+borders in this first session, open another openEuler terminal, repeat step
+4 there and run:
+
+kwin_x11 --replace
+
+Future starts should get KWin from the autostart file in step 5.
+
+Optional: one-click Windows shortcut
+------------------------------------
+The repository installer sets up a reusable systemd user service and a
+"Deepin Desktop (X410)" shortcut on the Windows desktop:
+
+sudo dnf install -y git
+git clone https://github.com/vinberg88/openEuler.git
+cd openEuler
+bash desktops/deepin/install.sh
+
+The shortcut starts X410 if needed and launches the same Deepin/X11 session.
+Diagnostics: deepin-x410 doctor, deepin-x410 status, deepin-x410 log.
+
+Notes
+-----
+- 26.09 is the openEuler version. Deepin Desktop is the desktop environment.
+- X410 is a separate Windows product.
+- The first full visual test of this 26.09 setup is pending. The working
+  reference was Deepin on openEuler 25.09 with X410.
