@@ -66,8 +66,16 @@ launcher asks Windows for the WSL adapter IP and tests it before the Linux
 route, DNS and localhost candidates. The DNS server address can differ from
 the Windows X410 address. If
 windows open without borders, check `deepin-x410 log` for KWin errors.
-If package downloads fail and `ip -4 addr show eth0` shows no IPv4 address,
-restart WSL from Windows with `wsl --shutdown` before changing DNS settings.
+If package downloads fail, check `ip -4 -br addr` and `ip -4 route`. Interface
+names vary by WSL networking mode. If there is no IPv4 address or default
+route, restart WSL from Windows with `wsl --shutdown`. If that does not help,
+try `networkingMode=consomme` under `[wsl2]` in the Windows `.wslconfig` file
+(`notepad $env:USERPROFILE\.wslconfig` in PowerShell), then shut down WSL
+again. This changes networking for every WSL 2 distro, so
+remove the line and restart WSL if it affects another distro. We verified
+`dnf makecache --refresh` against all four repositories with this mode on a
+WSL 3.0.4 host where NAT and mirrored mode did not provide IPv4. DNS changes
+alone cannot restore a missing IPv4 address.
 
 To stop DDE without closing X410, run `deepin-x410 stop`.
 
