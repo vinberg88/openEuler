@@ -1,4 +1,4 @@
-OpenEuler 25.09 and XFCE4 - Install XFCE desktop via openEuler 25.09 and windows 11 - WSL - LINUX - YouTUBE - 2026
+OpenEuler 25.09 and XFCE4 - WSL - Install XFCE desktop via openEuler 25.09 and windows 11 - LINUX - YouTUBE - 2026
 
 How to install XFCE4 via openEuler 25.09 - WSL - TEXT via GITHUB
 https://github.com/vinberg88/openEuler/blob/main/OpenEuler25.09-XFCE4.txt
@@ -6,7 +6,7 @@ https://github.com/vinberg88/openEuler/blob/main/OpenEuler25.09-XFCE4.txt
 How to install XFCE4 via openEuler 25.09 - WSL - MOVIE via YOUTUBE
 Comming SONE
 
-You can find openEuler 25.09 for wsl here: https://github.com/vinberg88/openEuler/releases
+Find openEuler 25.09 for WSL here -  https://github.com/vinberg88/openEuler/releases#release-1.2.0
 
 TOOLS THAT I USE FOR WSL and WINDOWS 11 - 2026 - XFCE4 and OpenEuler
 
@@ -45,7 +45,10 @@ https://apps.microsoft.com/detail/9p8548knj2m9?hl=sv-SE&gl=SE
                  `....`            
 
 
-About openEuler 25.09 - https://www.openeuler.org/en
+About openEuler 25.09 - https://www.openeuler.org/en/wiki/install/wsl/
+
+Find openEuler 25.09 for WSL here - https://github.com/vinberg88/openEuler/releases#release-1.2.0
+
 
 OpenEuler is an open source project incubated and
 operated by the OpenAtom Foundation. EulerOS is a
@@ -70,8 +73,6 @@ and easy to use.
 
 Find More Stuff for WSL: https://github.com/vinberg88/openEuler
 
-Old Page for WSL: https://github.com/vinberg88/opensuse
-
 New page for WSL. Under DEV: https://github.com/vinberg88
 
 ABOUT WSL for WINDOWS via GITHUB - https://vinberg88.github.io
@@ -86,7 +87,7 @@ a dual-boot configuration.
 
 Now lets start install of openEuler 25.09 and XFCE4
 
-You can find openEuler 25.09 for wsl: https://github.com/vinberg88/openEuler/releases
+You can find openEuler 25.09 for wsl: https://github.com/vinberg88/openEuler/releases#release-1.2.0
 
 Press Blue Icon and you are almost done - Setup User and Password
 
@@ -181,20 +182,17 @@ sudo dnf install xorg-*
 
 sudo dnf install xfwm4 xfdesktop xfce4-* xfce4-*-plugin *fonts
 
-sudo dnf install lightdm 
+sudo dnf install lightdm* 
 
 sudo systemctl start lightdm
-
 sudo systemctl enable lightdm
-
 sudo systemctl set-default graphical.target
 
 -----------------------------------
 
 Install some basic programs for XFCE4 openEuler 25.09
 
-sudo dnf install wget git dnf-utils x11* dnf* yum-utils* dnf-plugins-core xorg* nano --allowerasing --skip-broken --nobest -y
-sudo dnf install pip* -y
+sudo dnf install wget pip* git dnf-utils x11* dnf* yum-utils* dnf-plugins-core xorg* nano --allowerasing --skip-broken --nobest -y
 
 -----------------------------------
 
@@ -207,6 +205,20 @@ sudo dnf install ./fastfetch-linux-amd64.rpm -y
 
 
 Test by typing hyfetch in terminal: fastfetch
+
+----------------------------------------------
+
+Best fetch to install for OpenEuler 25.09
+
+git clone https://github.com/areofyl/fetch.git
+cd fetch
+sudo make
+sudo make install
+cd
+
+Test by typing fetch in terminal: fetch
+
+----------------------------------------------
 
 
                  `.cc.`                     
@@ -249,10 +261,14 @@ weston:          a7e35fdab455dce5774b43b8aff682f748307e31
 
 ------------------------------------------------------
 
+openEuler 25.09 Reboot - openEuler 25.09 Reboot - openEuler 25.09 Reboot
+
+------------------------------------------------------
 Install Visual Studio Code - 2026 - Microsoft Engine for Code - openEuler 25.09
 
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
-echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" |
+sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 sudo dnf check-update &&
 sudo dnf install code -y
  
@@ -265,7 +281,7 @@ sudo dnf install ./blanket-0.8.0-1.4.noarch.rpm -y
 
 -----------------------------------------------------
 
-Install FLATPAK and install some programs for Kiran and OpenEuler 25.09
+Install FLATPAK and install some programs for XFCE4 and OpenEuler 25.09
 
 Copy and paste: sudo dnf install flatpak* -y
 
@@ -310,7 +326,7 @@ sudo dnf install gdm* lightdm* -y
 -----------------------------------------------------
 
                  `.cc.`                     
-             ``.cccccccc..`                 OS: openEuler 25.09 x86_64 for WSL.
+             ``.cccccccc..`                 OS: openEuler 25.09 x86_64 for WSL and XFCE.
           `.cccccccccccccccc.`              
       ``.cccccccccccccccccccccc.``          Host: Windows Subsystem for Linux - openEuler-25.09 (3.0.4.0)
    `..cccccccccccccccccccccccccccc..`       
@@ -358,7 +374,7 @@ cd themes
 ./install.sh
 cd
 
-THIS IS A NICE THEME FOR openEuler.
+THIS IS A NICE THEME FOR OpenEuler 25.09.
 
 -----------------------------------------------------
 
