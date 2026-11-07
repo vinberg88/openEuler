@@ -9,7 +9,8 @@ Requirements
 - Windows 11 with WSL 2 and an openEuler 26.09 WSL distribution (x86-64).
 - X410 installed on Windows and started in Desktop mode.
 - A normal Linux user with sudo rights; do not run the desktop as root.
-- Internet access to the official openEuler software repositories.
+- Internet access to the official openEuler software repositories when
+  installing DDE into an existing distribution.
 
 Ready-made WSL package (release candidate)
 -----------------------------------------
@@ -24,11 +25,19 @@ wsl --install --from-file .\openEuler-26.09-Deepin-x86_64.wsl
 Compare the displayed hash with the first value in the .sha256 file. At first
 launch, create your own Linux username and password. The package has no
 preconfigured personal account. X410 is installed separately on Windows.
-To create the Windows desktop shortcut, follow "Optional: one-click Windows
-shortcut" below after the first launch.
+To start without downloading anything else, start X410 in Desktop mode on
+Windows, then run this in the openEuler terminal:
+
+deepin-x410 run
+
+Keep that terminal open while using Deepin. The command finds the Windows
+adapter IP and starts DDE with KWin. Press Ctrl+C to stop. For a Windows
+desktop shortcut, follow "Optional: one-click Windows shortcut" below.
 
 If you prefer to install DDE into an existing openEuler 26.09 WSL instance,
 start at step 1 below.
+The ready-made WSL package already includes DDE and xdpyinfo, so skip step 2
+when using that package.
 
 1. In Windows, start X410 in Desktop mode.
 
