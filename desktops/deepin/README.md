@@ -57,7 +57,10 @@ deepin-x410 log
 ```
 
 If the shortcut cannot connect to X410, check that X410 runs in Desktop mode
-and that the Windows firewall permits its private-network connection. If
+and that the Windows firewall permits its private-network connection. The
+launcher asks Windows for the WSL adapter IP and tests it before the Linux
+route, DNS and localhost candidates. The DNS server address can differ from
+the Windows X410 address. If
 windows open without borders, check `deepin-x410 log` for KWin errors.
 
 To stop DDE without closing X410, run `deepin-x410 stop`.

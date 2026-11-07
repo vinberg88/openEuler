@@ -31,12 +31,23 @@ systemd=true
 Then run "wsl --shutdown" in Windows PowerShell and reopen openEuler.
 Do not install a separate PID-namespace systemd workaround.
 
-4. In the openEuler terminal, set the X11 environment. The loop tries the
-Windows host address used by normal WSL networking, its DNS fallback,
-and localhost (useful with mirrored networking):
+4. The X410 address belongs to Windows. In Windows PowerShell, find the IP
+   address of the WSL virtual network adapter:
+
+Get-NetIPAddress -AddressFamily IPv4 | Where-Object InterfaceAlias -like '*WSL*' | Select-Object InterfaceAlias,IPAddress
+
+   On one tested computer this was 172.30.16.1. Your address may differ.
+   If the command returns no WSL adapter, try "ipconfig" and look for a
+   vEthernet (WSL) IPv4 address. With mirrored networking, localhost may work.
+
+   In the openEuler terminal, set the X11 environment. This first asks
+   Windows for the WSL adapter address, then tries the route, resolver and
+   localhost addresses. It selects the first address X410 responds to:
 
 unset DISPLAY WAYLAND_DISPLAY
-for host in "$(ip -4 route show default | awk 'NR==1 {print $3; exit}')" \
+WINDOWS_IP="$(timeout 10 powershell.exe -NoProfile -NonInteractive -Command 'Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.InterfaceAlias -like "vEthernet (WSL*" } | Select-Object -ExpandProperty IPAddress' 2>/dev/null | tr -d '\r' | head -n 1)"
+for host in "$WINDOWS_IP" \
+            "$(ip -4 route show default | awk 'NR==1 {print $3; exit}')" \
             "$(awk '$1=="nameserver" && $2 ~ /^[0-9.]+$/ {print $2; exit}' /etc/resolv.conf)" \
             127.0.0.1; do
     [ -n "$host" ] || continue
@@ -53,6 +64,10 @@ export LIBGL_ALWAYS_SOFTWARE=1
 
 If X410 is not found, verify Desktop mode and the Windows private-network
 firewall rule for X410.
+If Windows interop is unavailable, use the IP found in PowerShell directly,
+for example: export DISPLAY=172.30.16.1:0.0
+Do not change /etc/resolv.conf or make it immutable to set the X410 address.
+That file controls DNS; its address may be different from the X410 address.
 
 5. Make KWin start automatically whenever Deepin starts:
 
