@@ -37,9 +37,15 @@ for file in deepin-x410 deepin-x410-session deepin-x410.service Start-Deepin-X41
 done
 bash -n "$files/deepin-x410" "$files/deepin-x410-session"
 
-echo 'Installing Deepin and X11 tools from openEuler repositories ...'
-sudo -v
-sudo dnf install -y dde xdpyinfo
+if ! command -v startdde >/dev/null 2>&1 ||
+   ! command -v kwin_x11 >/dev/null 2>&1 ||
+   ! command -v xdpyinfo >/dev/null 2>&1; then
+    echo 'Installing Deepin and X11 tools from openEuler repositories ...'
+    sudo -v
+    sudo dnf install -y dde xdpyinfo
+else
+    echo 'Deepin and X11 tools are already installed.'
+fi
 
 for cmd in startdde kwin_x11 xdpyinfo; do
     command -v "$cmd" >/dev/null || { echo "Deepin installation lacks $cmd" >&2; exit 1; }

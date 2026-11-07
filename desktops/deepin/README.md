@@ -41,6 +41,9 @@ plus DDE and the launcher. Import it with `wsl --install --from-file`.
 Create a Linux user at first launch,
 then run `bash desktops/deepin/install.sh` from this repository to add your
 Windows shortcut. The package contains no personal account or user files.
+For an offline first start, launch X410 in Desktop mode on Windows and run
+`deepin-x410 run` in the openEuler terminal. Keep the terminal open while
+using Deepin; press Ctrl+C to stop the desktop.
 
 To reproduce the package on Windows, run `desktops/deepin/build.ps1` in
 PowerShell. It verifies the official openEuler 26.09 container image against a
