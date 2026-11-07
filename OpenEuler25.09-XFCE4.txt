@@ -4,7 +4,7 @@ How to install XFCE4 via openEuler 25.09 - WSL - TEXT via GITHUB
 https://github.com/vinberg88/openEuler/blob/main/OpenEuler25.09-XFCE4.txt
 
 How to install XFCE4 via openEuler 25.09 - WSL - MOVIE via YOUTUBE
-Comming SONE
+https://www.youtube.com/watch?v=BY5MZh2FLRI
 
 Find openEuler 25.09 for WSL here -  https://github.com/vinberg88/openEuler/releases#release-1.2.0
 
