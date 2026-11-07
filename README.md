@@ -271,6 +271,15 @@ See [DESKTOPS.md](DESKTOPS.md) for the test standard and roadmap.
 - disables WSL-inappropriate network, printer, SELinux and lock-screen applets for the current user;
 - writes a readable session log under `~/.local/state/kiran-x410/`.
 
+---
+
+<p align="center">
+<a href="https://github.com/vinberg88">
+<img width="579" height="241" alt="GetopenEuler" src="https://github.com/user-attachments/assets/c9e6e769-423b-4a66-851f-cd2c0c0c807b" />
+</p>
+
+---
+
 ## Repository layout
 
 ```text
