@@ -14,7 +14,7 @@ $x410 = (Get-Command 'x410.exe' -ErrorAction Stop).Source
 
 if (-not (Get-Process -Name 'X410' -ErrorAction SilentlyContinue)) {
     Write-Host 'Startar X410 i Desktop-lage ...' -ForegroundColor Cyan
-    Start-Process -FilePath $x410 -ArgumentList '/desktop' -WindowStyle Hidden
+    Start-Process -FilePath $x410 -ArgumentList '/desktop'
     Start-Sleep -Seconds 3
 }
 
