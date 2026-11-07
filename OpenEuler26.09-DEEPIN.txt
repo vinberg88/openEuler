@@ -97,11 +97,26 @@ for example: export DISPLAY=172.30.16.1:0.0
 Do not change /etc/resolv.conf or make it immutable to set the X410 address.
 That file controls DNS; its address may be different from the X410 address.
 
-If software downloads fail too, check "ip -4 addr show eth0". When eth0 has
-no IPv4 address, restart WSL from Windows PowerShell with "wsl --shutdown"
-and reopen openEuler. Changing the DNS file cannot restore a missing IPv4
-address. If eth0 has IPv4 but names still do not resolve, diagnose DNS as a
-separate problem before editing /etc/resolv.conf.
+If software downloads fail too, check "ip -4 -br addr" and "ip -4 route".
+The interface name can differ between WSL networking modes. If there is no
+usable IPv4 address or default route, restart WSL from Windows PowerShell
+with "wsl --shutdown" and reopen openEuler. Changing the DNS file cannot
+restore a missing IPv4 address.
+
+If the restart does not help, try WSL's Consomme networking mode. In Windows
+PowerShell, run "notepad $env:USERPROFILE\.wslconfig" and put
+"networkingMode=consomme" under [wsl2], keeping any other settings. Then run
+"wsl --shutdown" and reopen openEuler. For example:
+
+[wsl2]
+networkingMode=consomme
+
+This Windows setting affects every WSL 2 distribution, including Docker's.
+On a WSL 3.0.4 host where NAT and mirrored mode gave no IPv4, Consomme gave
+openEuler a default route and "sudo dnf makecache --refresh" succeeded for
+OS, everything, EPOL and update. If your other WSL software is affected,
+remove that line and run "wsl --shutdown" to return to its previous mode.
+If IPv4 works but names still do not resolve, diagnose DNS separately.
 
 5. Make KWin start automatically whenever Deepin starts:
 
