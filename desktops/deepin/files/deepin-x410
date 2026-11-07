@@ -1,0 +1,89 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+unit=deepin-x410.service
+
+x_ready() { timeout 3 xdpyinfo -display "$1" >/dev/null 2>&1; }
+
+display_value() {
+    local host display
+    # NAT, DNS-tunnel and mirrored WSL networking expose the Windows X server
+    # at different addresses. Select the first one that actually responds.
+    for host in \
+        "$(ip -4 route show default | awk 'NR == 1 {print $3; exit}')" \
+        "$(awk '$1 == "nameserver" && $2 ~ /^[0-9.]+$/ {print $2; exit}' /etc/resolv.conf)" \
+        127.0.0.1; do
+        [[ -n $host ]] || continue
+        display="$host:0.0"
+        if x_ready "$display"; then
+            printf '%s\n' "$display"
+            return 0
+        fi
+    done
+    echo 'X410 is not reachable. Start X410 in Desktop mode and check its Windows firewall rule.' >&2
+    return 1
+}
+
+write_environment() {
+    local path="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/deepin-x410.env"
+    umask 077
+    {
+        printf 'DISPLAY=%s\n' "$(display_value)"
+        printf 'XDG_SESSION_TYPE=x11\n'
+        printf 'XDG_SESSION_CLASS=user\n'
+        printf 'XDG_CURRENT_DESKTOP=Deepin\n'
+        printf 'XDG_SESSION_DESKTOP=deepin\n'
+        printf 'DESKTOP_SESSION=deepin\n'
+        printf 'GDK_BACKEND=x11\n'
+        printf 'QT_QPA_PLATFORM=xcb\n'
+        printf 'LIBGL_ALWAYS_SOFTWARE=1\n'
+        if [[ -S /mnt/wslg/PulseServer ]]; then
+            printf 'PULSE_SERVER=unix:/mnt/wslg/PulseServer\n'
+        fi
+    } > "$path"
+}
+
+start_session() {
+    local display
+    display="$(display_value)"
+    write_environment
+    systemctl --user daemon-reload
+    systemctl --user restart "$unit"
+    for _ in {1..20}; do
+        if systemctl --user is-active --quiet "$unit"; then
+            sleep 1
+            if systemctl --user is-active --quiet "$unit"; then
+                echo "Deepin is running on $display."
+                return 0
+            fi
+        fi
+        sleep 0.5
+    done
+    journalctl --user -u "$unit" -n 60 --no-pager >&2
+    return 1
+}
+
+case "${1:-start}" in
+    start) start_session ;;
+    run)
+        lock="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/deepin-x410-holder.lock"
+        exec 9>"$lock"
+        flock -n 9 || exit 0
+        trap 'systemctl --user stop "$unit" >/dev/null 2>&1 || true' EXIT INT TERM
+        start_session
+        while systemctl --user is-active --quiet "$unit"; do sleep 2; done
+        ;;
+    stop) systemctl --user stop "$unit" ;;
+    restart) systemctl --user stop "$unit"; start_session ;;
+    status) systemctl --user status "$unit" --no-pager || true ;;
+    doctor)
+        printf 'Linux: %s\n' "$(. /etc/os-release; printf '%s' "$PRETTY_NAME")"
+        for cmd in startdde kwin_x11 xdpyinfo systemctl; do
+            command -v "$cmd" || exit 1
+        done
+        display="$(display_value)" || exit 1
+        printf 'X410 connection: OK (%s)\n' "$display"
+        ;;
+    log) journalctl --user -u "$unit" -n "${2:-100}" --no-pager ;;
+    *) echo 'Usage: deepin-x410 {start|stop|restart|status|doctor|log [lines]|run}' >&2; exit 2 ;;
+esac

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+unset WAYLAND_DISPLAY
+export XDG_SESSION_TYPE=x11
+export GDK_BACKEND=x11
+export QT_QPA_PLATFORM=xcb
+export LIBGL_ALWAYS_SOFTWARE=1
+
+log_dir="${XDG_STATE_HOME:-$HOME/.local/state}/deepin-x410"
+mkdir -p "$log_dir"
+exec >>"$log_dir/session.log" 2>&1
+printf '\n===== %s =====\n' "$(date --iso-8601=seconds)"
+timeout 5 xdpyinfo -display "${DISPLAY:?DISPLAY missing}" >/dev/null
+
+# startdde normally launches the window manager, but the openEuler/WSL/X410
+# combination can leave it absent. Run KWin explicitly in this X11 session.
+kwin_x11 --replace &
+exec startdde
