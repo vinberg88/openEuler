@@ -153,7 +153,8 @@ How to install GNOME deskop on openEuler 25.09
 <img width="1920" height="1080" alt="openEuler-Gnome-25 09" src="https://github.com/user-attachments/assets/b0ee6091-f0b8-46d1-a25a-12879e8e9f90" />
 </p>
 
-- [Install GNOME desktop via openEuler](OpenEuler25.09-GNOME.txt)
+- **GitHUB Text Guide:** [Install GNOME desktop via openEuler](OpenEuler25.09-GNOME.txt)
+
 - **YouTube video guide:** [How to install GNOME via openEuler](https://www.youtube.com/watch?v=9MUJaIaQZ9I)
 
 About Gnome desktop - https://www.gnome.org
