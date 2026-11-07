@@ -44,13 +44,14 @@ The first tested desktop is **Kiran Desktop on openEuler 25.09 through X410**. T
 
 # OpenEuler 25.09 and XFCE4 For WSL - 2026
 
-Comming SONE working on this NOW...
+About openEuler - OpenEuler is an open source project incubated and operated by the OpenAtom Foundation. EulerOS is a 
+commercial Linux distribution developed by Huawei based on Red Hat Enterprise Linux.
 
 Have to install all - Video via YouTUBE - TEXT via GitHUB
 
 Text Via GITHUB - [How to install XFCE4 desktop via OpenEuler 25.09](OpenEuler25.09-XFCE4.txt)
 
-Video via YouTUBE - Comming SONE [HOW TO INSTALL XFCE4 desktop via OpenEuler 25.09](https://www.youtube.com/watch?v=mdPZTSXXc4w)
+Video via YouTUBE - [HOW TO INSTALL XFCE4 desktop via OpenEuler 25.09](https://www.youtube.com/watch?v=BY5MZh2FLRI)
 
 <p align="center">
 <a href="https://github.com/vinberg88/openEuler/blob/main/OpenEuler25.09-XFCE4.txt">
